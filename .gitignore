@@ -1,0 +1,15 @@
+
+/.angular
+.angular
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+
+
+# misc
+/.sass-cache
+npm-debug.log
+.env
