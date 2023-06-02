@@ -1,6 +1,18 @@
-# Untitled2
+# SymAware
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
+
+## Intstallation
+
+Before building the project, please install all asociated dependencies by running this command in the terminal:
+
+'''
+npm install
+'''
+or
+'''
+npm i
+'''
 
 ## Development server
 
