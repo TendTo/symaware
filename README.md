@@ -6,13 +6,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Before building the project, please install all asociated dependencies by running this command in the terminal:
 
-'''
+```bash
 npm install
-'''
+```
 or
-'''
+```bash
 npm i
-'''
+```
 
 ## Development server
 
