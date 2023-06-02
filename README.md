@@ -1,3 +1,5 @@
+![Logo_SymAware](assets/icons/Logo_SymAware.png)
+
 # SymAware
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.3.
