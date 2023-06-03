@@ -12,7 +12,7 @@ const animation = { duration: 5000, easing: (t) => t }
 })
 
 export class HomeComponent {
-  @ViewChild("sliderRef") sliderRef: ElementRef<HTMLElement>
+  @ViewChild("memberSlider") sliderRef: ElementRef<HTMLElement>
 
   slider: KeenSliderInstance = null
 
