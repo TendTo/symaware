@@ -1,0 +1,38 @@
+@import "../scss/variables";
+
+.u-text-underline{
+
+  text-decoration: underline !important;
+  text-decoration-color: $color-dark-blue;
+
+  &__sand{
+    text-decoration: underline;
+    text-decoration-color: $color-sand !important;
+  }
+}
+
+.u-justify-center {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.u-inline-element {
+  display: inline-block;
+}
+
+.u-block-element {
+  display: block;
+}
+
+.u-margin-right {
+  margin-right: 2rem;
+}
+
+.u-margin-left {
+  margin-left: 2rem;
+}
+
+.u-margin-top {
+  margin-top: 2rem;
+}
