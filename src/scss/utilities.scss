@@ -1,10 +1,8 @@
 @import "../scss/variables";
 
 .u-text-underline{
-
   text-decoration: underline !important;
   text-decoration-color: $color-dark-blue;
-
   &__sand{
     text-decoration: underline;
     text-decoration-color: $color-sand !important;

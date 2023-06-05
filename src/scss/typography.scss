@@ -5,6 +5,11 @@
   font-weight: 900;
   color: #1D2E5D;
   margin: 1rem 0;
+
+  &__white {
+    @extend .heading_primary;
+    color: $color-white !important;
+  }
 }
 
 .heading_secondary{
@@ -17,7 +22,8 @@
 .paragraph {
   font-size: 1rem;
   font-weight: 400;
-  color: #1D2E5D;
+  margin: 0;
+  color: $color-font-blue;
 }
 
 

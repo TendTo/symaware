@@ -1,0 +1,19 @@
+.home_heading {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: wrap column;
+    font-weight: 900;
+    font-size: 4rem;
+    color: #1D2E5D;
+    text-shadow: 0.1rem 0.1rem #FFDD7E;
+    padding-right: 1rem;
+    margin-top: 6rem;
+    margin-bottom: 0rem;
+    text-align: center;
+    &__small {
+        font-size: 2rem;
+    }
+
+
+}

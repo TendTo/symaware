@@ -1,0 +1,55 @@
+@import "../../scss/variables";
+
+.wrapper_leaders{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap row;
+    margin-top: 2rem;
+}
+
+.team_page{
+    margin: 2rem 8rem 0 8rem;
+}
+
+.search{
+    display: flex;
+    justify-content: space-between;
+    &__item{
+        margin-top: 1.9rem;
+        color: $color-font-blue;
+    }
+}
+
+.leader{
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+    flex-flow: column wrap;
+    max-width: 15rem;
+
+    &__name{
+        font-size: 1rem;
+        font-weight: 700;
+        color: $color-dark-blue;
+        text-wrap: normal;
+    }
+}
+.company{
+    align-self: center;
+    justify-self: end;
+    height: auto;
+    width: auto;
+}
+.profile{
+    border-radius: 50%;
+    height: auto;
+    width :10rem;
+    box-shadow: 0 5px 10px rgb(0,0,0,0.3);
+}
+
+.divide_section{
+    margin: 2rem 0;
+    height: 0.25rem;
+    background-color: $color-sand;
+}
