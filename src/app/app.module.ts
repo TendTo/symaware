@@ -12,6 +12,7 @@ import { ResearchPublicationsComponent } from './research-publications/research-
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BackdropComponent } from './backdrop/backdrop.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { BackdropComponent } from './backdrop/backdrop.component';
     ContactComponent,
     PageNotFoundComponent,
     BackdropComponent,
+    FooterComponent,
   ],
     imports: [
         BrowserModule,

@@ -1,28 +1,25 @@
 .wrapper_contact{
     margin: 0;
-    position: relative;
-}
-
-.image_contacts{
-    top:-63%;
-    position: absolute;
-    z-index: -1;
-    height: auto;
-    width: 100%;
+    //position: relative;
+  background-image: url("../../assets/images/SymAware_Blue_Vector.svg");
+  background-repeat: no-repeat ;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .wrapper_box {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 12rem;
+    padding: 10rem 1rem;
 
     &__contacts {
         background-color: #F5F5F5;
         border-radius: 1rem;
         height: 15rem;
         width: 22.5rem;
-        padding: 2rem;
+        padding: 1rem 2rem 2rem 2rem;
+        margin: 2rem;
     }
 
   .wrapper_media{
@@ -33,25 +30,30 @@
   }
     .media{
         display: flex;
-        justify-content: space-around;
+        justify-content: flex-start;
         align-content: center;
+        align-items: center;
+        flex-flow: row nowrap;
         padding: 1rem 0;
+        text-decoration: none;
 
         &__padded {
           padding-top: 2rem;
         }
         &__img {
-            height: 25px;
-            width: auto;
+            height: auto;
+            width: 25px;
             align-self: center;
+            margin-right: 1.5rem;
             &_big{
               height: 100px;
+              margin-right: 1rem;
             }
         }
         &__name {
               display: inline-block;
+              text-align: left;
               margin: 0;
         }
     }
 }
-

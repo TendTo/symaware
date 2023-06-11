@@ -1,0 +1,34 @@
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(15rem);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+  }
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateX(-15rem);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
+  }
+}
+
+.a-moveIn-right {
+  animation: moveInRight 0.625s ease-in-out;
+}
+.a-moveIn-left {
+  animation: moveInLeft 0.625s ease-in-out;
+}
+

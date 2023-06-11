@@ -26,6 +26,14 @@
   color: $color-font-blue;
 }
 
+.paragraph__highlighted {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  color: $color-dark-blue;
+}
+
+
 
 t-color-black {
   color: $color-black !important;
