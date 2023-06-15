@@ -12,5 +12,5 @@ export class AppComponent {
   constructor(
      private router: Router,
   ) {}
-  title = 'untitled2';
+  title = 'SymAware';
 }

@@ -2,7 +2,7 @@
 
 .wrapper_leaders{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-flow: wrap row;
     margin-top: 2rem;
 }
@@ -14,10 +14,7 @@
 .search{
     display: flex;
     justify-content: space-between;
-    &__item{
-        margin-top: 1.9rem;
-        color: $color-font-blue;
-    }
+    align-items: center;
 }
 
 .leader{
@@ -27,7 +24,8 @@
     align-items: center;
     flex-flow: column wrap;
     max-width: 15rem;
-
+    margin-right: 3rem;
+    transition: all 0.6s ease-out;
     &__name{
         font-size: 1rem;
         font-weight: 700;
@@ -52,4 +50,8 @@
     margin: 2rem 0;
     height: 0.25rem;
     background-color: $color-sand;
+}
+.asda{
+    position: relative;
+    z-index: 99;
 }

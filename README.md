@@ -1,4 +1,4 @@
-![Logo_SymAware](src/assets/icons/Logo_SymAware.png)
+![Logo_SymAware](src/assets/icons/logo-symaware.png)
 
 # SymAware
 

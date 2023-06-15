@@ -1,0 +1,10 @@
+.wrapper_research {
+    margin: 2rem 8rem;
+    .wrapper_categories {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row wrap;
+        width: 50%;
+    }
+}

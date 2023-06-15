@@ -6,6 +6,8 @@
 @import "./scss/typography.scss";
 @import "./scss/variables.scss";
 @import "./scss/animations.scss";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
 
 html,
 body {
@@ -18,3 +20,6 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

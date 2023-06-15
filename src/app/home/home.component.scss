@@ -1,50 +1,45 @@
 @import "../../scss/variables";
-.container_home{
-    margin: 0 auto;
+.container_home {
     //max-width: 80rem;
+    margin: 0 auto;
     position: relative;
 
-    .landing_text {
-      margin-bottom: 15rem;
-        padding: 0.5rem 6.5rem;
+    @for $i from 1 to 6 {
+        &.page-#{$i} {
+            #pagination li:nth-of-type(#{$i}) {
+                @extend %active-dot;
+            }
+        }
+    }
+    .landing-section {
+        margin-bottom: 8rem;
+        padding: 5rem 6.5rem;
     }
 
-    .home_heading{
+    .home_heading {
         display: flex;
         justify-content: flex-start;
         font-weight: 900;
-        font-size: 2.5rem;
+        font-size: 3.25rem;
         font-style: normal;
+        margin: 0;
         letter-spacing: -0.03em;
 
         &__first {
-            color: #1D2E5D;
-            text-shadow: 0.25rem 0.25rem #FFDD7E;
-            padding-right: 1rem;
-            margin-top: 4rem;
-            margin-bottom: 1rem;
+            color: $color-dark-blue;
+            text-shadow: 0.25rem 0.25rem $color-sand;
+            margin: 0 1.2rem 0 0;
         }
 
         &__second {
-            color: #FFDD7E;
+            color: $color-sand;
+            margin: 0;
             text-shadow: 0.25rem 0.25rem #BD6F13;
-            margin-top: 4rem;
-            margin-bottom: 1rem;
         }
-
     }
 
-    .paragraph {
-        display: flex;
-        justify-content: flex-start;
-        font-size: 1rem;
+    .intro-paragraph {
         width: 30%;
-        flex-flow: column;
-        color: #486284;
-
-        &__margin {
-            margin-bottom: 2rem;
-        }
     }
 
     .hero {
@@ -52,23 +47,17 @@
         top: 0;
         left: 43%;
         z-index: -1;
+
             &__image{
                 height: auto;
                 width: 350%;
-                z-index: -1;
-                box-shadow: 50px 15px white, 33px 30px $color-sand;
+                box-shadow: 50px 15px $color-white, 33px 30px $color-sand;
             }
         }
 
-    .boxes{
-        display: flex;
-        justify-content: space-between;
-        flex-flow: row wrap;
-        align-items: center;
-    }
 
 
-    .members{
+    .members {
         margin-right: 6rem;
         height: 75%;
         align-self: center;
@@ -84,44 +73,15 @@
         }
     }
 }
-.news{
-    padding: 2rem 6.5rem 6rem 6.5rem;
-}
-.box_news{
-    margin: 1rem;
-    max-width: 20rem;
-    &:hover{
-        transform: scale(1.05);
-        transition-duration: 0.5s;
-    }
-
-    .wrapper_image{
-        position: relative;
-        height: 4rem;
-    }
-
-    .image_news{
-        position: absolute;
-        border-radius: 1.5rem;
-        min-width: 20rem;
-        max-width: 20rem;
-        z-index: -1;
-    }
-
-    .wrapper_text{
-        margin-top: 6rem;
-        padding: 0.5rem 1rem 1rem 1rem;
-        background: #F2F2F2;
-        border-radius: 1.5rem;
-        filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
-    }
+.wrapper_news {
+    padding: 2rem 6rem 6rem 6rem;
+    margin: 2rem 4rem;
 }
 
 .wrapper_consortium{
     margin: 0;
     padding: 2rem 6.5rem 4rem 6.5rem;
-    position: relative;
-    background-image: url("../../assets/images/SymAware_Blue_Vector.svg");
+    background-image: url("../../assets/images/vector-symaware_hero.svg");
     background-repeat: no-repeat ;
     background-size: cover;
     background-attachment: fixed;
@@ -137,12 +97,13 @@
     display: flex;
     border-radius: 1rem;
     max-height: 18rem;
-    max-width: 24rem;
+    max-width: 22rem;
     min-height: 12rem;
-    min-width: 20rem;
+    min-width: 22rem;
     margin-bottom: 2rem;
-    padding: 1rem;
-    align-content: flex-start;
+    margin-right: 1rem;
+    padding: 1.5rem;
+    align-content: space-between;
     justify-content: flex-start;
     align-items: center;
     flex-flow: row wrap;
@@ -163,3 +124,109 @@
     }
 }
 
+.boxes {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+
+    .box_news {
+        margin: 1rem;
+        max-width: 18rem;
+
+        &:hover{
+            transform: scale(1.05);
+            transition-duration: 0.5s;
+        }
+
+        .wrapper_image{
+            position: relative;
+            height: 4rem;
+        }
+
+        .image_news{
+            position: absolute;
+            border-radius: 1.5rem;
+            min-width: 18rem;
+            max-width: 18rem;
+            z-index: -1;
+        }
+
+        .wrapper_text{
+            margin-top: 6rem;
+            padding: 0.5rem 1rem 1rem 1rem;
+            background: #F2F2F2;
+            border-radius: 1.5rem;
+            filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.25));
+        }
+    }
+}
+
+
+$base-color: #334242;
+$degrees: 5deg;
+
+.main {
+    section {
+        margin: 0;
+        height: 100vh;
+
+        @for $i from 1 to 6 {
+            &:nth-child(#{$i}) {
+                background-color: lighten($base-color, $degrees*$i);
+            }
+        }
+
+        h1 {
+            font-size: 38px;
+            color: #fff;
+            margin: 0;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+    }
+}
+
+#pagination {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    list-style: none;
+
+    li {
+        position: relative;
+        margin: 20px 0;
+        background: #fff;
+        border-radius: 100%;
+        width: 8px;
+        height: 8px;
+        left: 1vw;
+        border: 3px solid #1D2E5D;
+        box-shadow: #1A202C;
+        transition: all .2s ease;
+
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+
+    a {
+        position: absolute;
+        text-decoration: none;
+        right: 0;
+        top: 0;
+        color: inherit;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+%active-dot {
+    transform: scale(2);
+}
+
+.barrier{
+    min-height: 4rem;
+    background: $color-sand;
+}
