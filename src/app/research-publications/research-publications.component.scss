@@ -1,10 +1,36 @@
+@import "../../scss/variables";
+
 .wrapper_research {
     margin: 2rem 8rem;
+    min-height: 55vh;
     .wrapper_categories {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: flex-start;
+        align-content: flex-start;
         flex-flow: row wrap;
-        width: 50%;
+        width: 100%;
+    }
+    .wrapper_years{
+        margin-bottom: 2rem;
+    }
+}
+.publication{
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 2rem;
+    width: 70%;
+
+    &__title{
+        font-size: 1.3rem !important;
+    }
+
+}
+.cat-button{
+    border: none;
+    background: none;
+    padding: 0;
+    &:hover{
+        cursor: pointer;
+        color: $color-black;
     }
 }

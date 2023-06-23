@@ -16,32 +16,45 @@
 }
 
 .consortium_box {
-    display: flex;
-    align-content: space-between;
-    justify-content: flex-start;
-    align-items: center;
-    flex-flow: row wrap;
-    border-radius: 1rem;
-    max-height: 18rem;
-    max-width: 24rem;
-    min-height: 12rem;
-    min-width: 20rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
+  display: flex;
+  border-radius: 1rem;
+  max-height: 18rem;
+  max-width: 22rem;
+  min-height: 12rem;
+  min-width: 22rem;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
+  padding: 1.5rem;
+  align-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+  box-shadow: 0 0.5rem 0.25rem rgb(0,0,0,0.3);
+  background-color: #F2F2F2;
+  transition: 0.2s;
+  &:hover{
+    scale: 1.1;
     background-color: $color-white;
+    transition: 0.2s;
+  }
 
-    &__image{
-      min-height: 4rem;
-      display: flex;
-      align-content: center;
-    }
-    &__text {
-     display: block;
-     font-size: 0.9rem;
-    }
+  &__image{
+    max-height: 3rem;
+    min-height: 3rem;
+    display: flex;
+    align-content: center;
+  }
+  &__text {
+    display: block;
+    font-size: 0.9rem;
+  }
 
-    &__members {
-     align-self: center;
-    }
+  &__members {
+    align-self: center;
+    max-height: 3rem;
+    max-width: 10rem;
+    height: 100%;
+    width: auto;
+  }
 }
 

@@ -14,6 +14,7 @@
     .landing-section {
         margin-bottom: 8rem;
         padding: 5rem 6.5rem;
+
     }
 
     .home_heading {
@@ -25,10 +26,17 @@
         margin: 0;
         letter-spacing: -0.03em;
 
+        @media screen and (max-width: 1080px){
+            flex-flow: wrap column;
+        }
         &__first {
             color: $color-dark-blue;
             text-shadow: 0.25rem 0.25rem $color-sand;
-            margin: 0 1.2rem 0 0;
+            margin: 0 1.5rem 0 0;
+            @media screen and (max-width: 1080px){
+                color: $color-sand;
+                text-shadow: 0.25rem 0.25rem #BD6F13;
+            }
         }
 
         &__second {
@@ -40,22 +48,34 @@
 
     .intro-paragraph {
         width: 30%;
+        @media screen and (max-width: 1080px){
+            width: 70%;
+            color: $color-white;
+        }
     }
 
     .hero {
         position: absolute;
         top: 0;
-        left: 43%;
+        left: 40%;
         z-index: -1;
-
             &__image{
                 height: auto;
                 width: 350%;
                 box-shadow: 50px 15px $color-white, 33px 30px $color-sand;
+                @media screen and (max-width: 1080px){
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: none;
+                }
+            }
+            @media screen and (max-width: 1080px){
+                left: 0;
+                display: none;
+                position: relative;
+
             }
         }
-
-
 
     .members {
         margin-right: 6rem;
@@ -85,12 +105,18 @@
     background-repeat: no-repeat ;
     background-size: cover;
     background-attachment: fixed;
+    @media screen and (max-width: 1080px) {
+
+    }
 }
 .consortium{
     margin-top: 2rem;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
+    @media screen and (max-width: 1080px) {
+        justify-content: center;
+    }
 }
 
 .consortium_box {
@@ -108,19 +134,32 @@
     align-items: center;
     flex-flow: row wrap;
     background-color: #F2F2F2;
+    box-shadow: 0 0.5rem 0.25rem rgb(0,0,0,0.3);
+    transition: 0.2s;
+    &:hover{
+        scale: 1.1;
+        background-color: $color-white;
+        transition: 0.2s;
+    }
 
     &__image{
-        min-height: 4rem;
+        max-height: 3rem;
+        min-height: 3rem;
         display: flex;
         align-content: center;
     }
     &__text {
         display: block;
         font-size: 0.9rem;
+        color: inherit;
     }
 
     &__members {
         align-self: center;
+        max-height: 3rem;
+        max-width: 10rem;
+        height: 100%;
+        width: auto;
     }
 }
 
@@ -133,11 +172,12 @@
     .box_news {
         margin: 1rem;
         max-width: 18rem;
-
+        transition-duration: 0.25s;
         &:hover{
             transform: scale(1.05);
-            transition-duration: 0.5s;
+            transition-duration: 0.25s;
         }
+
 
         .wrapper_image{
             position: relative;
@@ -193,7 +233,9 @@ $degrees: 5deg;
     transform: translateY(-50%);
     left: 0;
     list-style: none;
-
+    @media screen and (max-width: 1080px) {
+        display: none;
+    }
     li {
         position: relative;
         margin: 20px 0;
@@ -229,4 +271,14 @@ $degrees: 5deg;
 .barrier{
     min-height: 4rem;
     background: $color-sand;
+}
+.vector{
+    display: none;
+
+    @media screen and (max-width: 1080px){
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+    }
 }
