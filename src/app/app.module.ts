@@ -20,8 +20,7 @@ import { BackdropComponent } from './backdrop/backdrop.component';
 import { FooterComponent } from './footer/footer.component';
 import { NewsComponent } from './news/news.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { LinkifyPipe } from './linkify.pipe';
-import { SafeLinkPipe } from './safe-link.pipe';
+
 
 
 @NgModule({
@@ -38,8 +37,6 @@ import { SafeLinkPipe } from './safe-link.pipe';
     FooterComponent,
     NewsComponent,
     FilterPipe,
-    LinkifyPipe,
-    SafeLinkPipe,
   ],
     imports: [
         BrowserModule,

@@ -1,4 +1,6 @@
-import { Component, OnInit, SecurityContext } from "@angular/core";
+import { Component, OnInit} from "@angular/core";
+
+//test
 
 @Component({
     selector: "app-news",
