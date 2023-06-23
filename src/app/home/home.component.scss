@@ -95,7 +95,10 @@
 }
 .wrapper_news {
     padding: 2rem 6rem 6rem 6rem;
-    margin: 2rem 4rem;
+    margin: 0;
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .wrapper_consortium{
@@ -202,7 +205,13 @@
     }
 }
 
+.wrapper_news__box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem 1rem;
 
+}
 $base-color: #334242;
 $degrees: 5deg;
 
