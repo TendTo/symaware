@@ -34,7 +34,15 @@
   font-size: 1rem;
   font-weight: 500;
   margin: 0;
-  color: $color-dark-blue;
+  color: $color-black;
+  &__dark {
+    @extend .paragraph__highlighted;
+    color: $color-dark-blue;
+  }
+  &__light {
+    @extend .paragraph__highlighted;
+    color: $color-font-blue;
+  }
 }
 
 t-color-black {

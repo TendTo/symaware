@@ -39,9 +39,18 @@
 
 .a-moveIn-right {
   animation: moveInRight 0.625s ease-in-out;
+  &__delayed{
+    @extend .a-moveIn-right;
+    transition-delay: 625ms;
+  }
 }
 .a-moveIn-left {
   animation: moveInLeft 0.625s ease-in-out;
+
+  &__delayed{
+    @extend .a-moveIn-left;
+    transition-delay: 625ms;
+  }
 }
 
 .a-fade-in {

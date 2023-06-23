@@ -5,6 +5,9 @@
     justify-content: flex-start;
     flex-flow: wrap row;
     margin-top: 2rem;
+    &:hover .wrapper_profile__expanded{
+        display: flex;
+    }
 }
 
 .team_page{
@@ -15,35 +18,82 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &__item{
+        margin-top: 1.9rem;
+        color: $color-font-blue;
+    }
+
+    &__button{
+        border: none;
+        background: none;
+
+        &:hover{
+            cursor: pointer;
+            color: $color-black;
+        }
+    }
 }
 
 .leader{
     display: flex;
     justify-content: flex-start;
-    align-content: flex-start;
+    justify-items: center;
+    align-content: center;
     align-items: center;
     flex-flow: column wrap;
-    max-width: 15rem;
+    max-width: 10rem;
     margin-right: 3rem;
     transition: all 0.6s ease-out;
-    &__name{
+
+    &__name {
         font-size: 1rem;
+        margin: 0.5rem 0 0 0;
         font-weight: 700;
         color: $color-dark-blue;
         text-wrap: normal;
     }
+    &__role {
+        margin: 0;
+        font-size: 1rem;
+        justify-self: center;
+        color: $color-dark-grey;
+        text-wrap: normal;
+        text-align: center;
+    }
 }
-.company{
-    align-self: center;
-    justify-self: end;
-    height: auto;
-    width: auto;
+.container__company {
+    min-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scale: 0.9;
+    .company{
+        align-self: center;
+        justify-self: end;
+        height: auto;
+        width: auto;
+        max-width: 9rem;
+        max-height: 3rem;
+    }
+}
+.wrapper_profile {
+    border-radius: 50%;
+    max-height: 10rem;
+    overflow: hidden;
+    box-shadow: 0 0.25rem 0.5rem rgb(0,0,0,0.3);
 }
 .profile{
-    border-radius: 50%;
     height: auto;
     width :10rem;
     box-shadow: 0 5px 10px rgb(0,0,0,0.3);
+    scale: 1.0;
+    transition: 0.35s ease-in-out;
+    &:hover{
+        scale: 1.1;
+        transition: 0.35s ease-in-out;
+    }
+
 }
 
 .divide_section{
@@ -51,7 +101,46 @@
     height: 0.25rem;
     background-color: $color-sand;
 }
-.asda{
-    position: relative;
+
+.wrapper_profile__expanded {
     z-index: 99;
+    position: absolute;
+    top: 1%;
+    right: 35%;
+    background-color: rgb(255,255,255,0.90);
+    min-width: 12rem;
+    padding: 3rem;
+    width: 20rem;
+    min-height: 32rem;
+    display: none;
+    align-content: flex-start;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-flow: column wrap;
+    border-radius: 2%;
+    box-shadow: 0px 0px 15px $color-black;
+
+}
+.wrapper_profile__expanded>* {
+    flex: 1 1 100%;
+}
+
+.expanded_logo{
+    padding: 0 0 1rem 0;
+}
+.expanded_photo{
+
+}
+.expanded_logo__img {
+    height: 2rem;
+    width: auto;
+}
+.expanded_photo__img{
+    height: 15rem;
+    width: auto;
+    border-radius: 50%;
+}
+.expanded_name{
+    margin: 0;
 }

@@ -17,6 +17,7 @@ export class TeamComponent {
   leaders = leaders;
   institutions = institutions;
   selected;
+  all;
 
 
 }

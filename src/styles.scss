@@ -23,3 +23,19 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+button {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+h1 {
+
+  @media screen and (max-width: 1080px) {
+    text-align: left;
+  }
+
+}
