@@ -7,6 +7,7 @@ import { ContactComponent } from "./contact/contact.component";
 import { ResearchPublicationsComponent } from "./research-publications/research-publications.component";
 import { TeamComponent } from "./team/team.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import {NewsComponent} from "./news/news.component";
 
 const routes: Routes = [
   { path: "home", pathMatch: "full", component: HomeComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: "contacts", component: ContactComponent},
   { path: "research-publications", component: ResearchPublicationsComponent},
   { path: "team", component: TeamComponent},
+  { path: "news", component: NewsComponent},
   { path: "**", component: PageNotFoundComponent}
   ]
 @NgModule({

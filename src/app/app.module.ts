@@ -18,7 +18,10 @@ import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BackdropComponent } from './backdrop/backdrop.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { NewsComponent } from './news/news.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { LinkifyPipe } from './linkify.pipe';
+import { SafeLinkPipe } from './safe-link.pipe';
 
 
 @NgModule({
@@ -33,7 +36,10 @@ import { FooterComponent } from './footer/footer.component';
     PageNotFoundComponent,
     BackdropComponent,
     FooterComponent,
+    NewsComponent,
     FilterPipe,
+    LinkifyPipe,
+    SafeLinkPipe,
   ],
     imports: [
         BrowserModule,
@@ -43,6 +49,7 @@ import { FooterComponent } from './footer/footer.component';
         MatFormFieldModule,
         MatSelectModule,
         BrowserAnimationsModule,
+        MatProgressSpinnerModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
