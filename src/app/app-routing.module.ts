@@ -7,22 +7,19 @@ import { ContactComponent } from "./contact/contact.component";
 import { ResearchPublicationsComponent } from "./research-publications/research-publications.component";
 import { TeamComponent } from "./team/team.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import {NewsComponent} from "./news/news.component";
 
 const routes: Routes = [
-  { path: "", pathMatch: "full", component: HomeComponent },
+  { path: "home", pathMatch: "full", component: HomeComponent },
   { path: "consortium", component: ConsortiumComponent},
   { path: "contacts", component: ContactComponent},
   { path: "research-publications", component: ResearchPublicationsComponent},
   { path: "team", component: TeamComponent},
-  { path: "**", component: PageNotFoundComponent},
-
+  { path: "news", component: NewsComponent},
+  { path: "**", component: PageNotFoundComponent}
   ]
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    scrollPositionRestoration: 'top',
-    anchorScrolling: 'enabled',
-    scrollOffset: [0, 64] // [x, y]
-  })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
