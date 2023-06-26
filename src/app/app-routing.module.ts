@@ -10,7 +10,7 @@ import { PageNotFoundComponent } from "./page-not-found/page-not-found.component
 import {NewsComponent} from "./news/news.component";
 
 const routes: Routes = [
-  { path: "home", pathMatch: "full", component: HomeComponent },
+  { path: "", pathMatch: "full", component: HomeComponent },
   { path: "consortium", component: ConsortiumComponent},
   { path: "contacts", component: ContactComponent},
   { path: "research-publications", component: ResearchPublicationsComponent},
