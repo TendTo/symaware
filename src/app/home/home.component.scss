@@ -14,7 +14,19 @@
     .landing-section {
         margin-bottom: 8rem;
         padding: 5rem 6.5rem;
+        margin-left: 5rem;
+        padding-left: clamp(5rem,calc(50vw - 46.5rem),calc(50vw - 46.5rem));
+        @media screen and (min-width: 1440px){
+            margin-bottom: 12rem;
+        }
 
+        @media screen and (max-width: 900px) {
+            display: flex;
+            align-content: center;
+            flex-flow: column wrap;
+            margin: 0rem;
+            padding: 2rem 1rem;
+        }
     }
 
     .home_heading {
@@ -25,9 +37,9 @@
         font-style: normal;
         margin: 0;
         letter-spacing: -0.03em;
-
-        @media screen and (max-width: 1080px){
+        @media screen and (max-width: 900px){
             flex-flow: wrap column;
+            font-size: 2.5rem;
         }
         &__first {
             color: $color-dark-blue;
@@ -43,11 +55,12 @@
             color: $color-sand;
             margin: 0;
             text-shadow: 0.25rem 0.25rem #BD6F13;
+            padding-left: 5rem;
         }
     }
 
     .intro-paragraph {
-        width: 30%;
+        width: 24rem;
         @media screen and (max-width: 1080px){
             width: 70%;
             color: $color-white;
@@ -57,7 +70,7 @@
     .hero {
         position: absolute;
         top: 0;
-        left: 40%;
+        left: clamp(41.5rem,calc(50vw - 10rem),calc(50vw - 10rem));
         z-index: -1;
             &__image{
                 height: auto;
@@ -68,12 +81,13 @@
                     height: 100%;
                     box-shadow: none;
                 }
+                @media screen and (min-width: 1600px){
+                    width: calc(350% + 20rem);
+                }
             }
             @media screen and (max-width: 1080px){
-                left: 0;
-                display: none;
                 position: relative;
-
+                left: 0;
             }
         }
 
@@ -96,8 +110,18 @@
 .wrapper_news {
     padding: 2rem 6rem 6rem 6rem;
     margin: 2rem 4rem;
+    @media screen and (max-width: 900px) {
+        margin: 2rem 0;
+        padding: 0 2rem;
+    }
 }
+.wrapper_news__box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem 1rem;
 
+}
 .wrapper_consortium{
     margin: 0;
     padding: 2rem 6.5rem 4rem 6.5rem;
@@ -105,8 +129,12 @@
     background-repeat: no-repeat ;
     background-size: cover;
     background-attachment: fixed;
-    @media screen and (max-width: 1080px) {
 
+    @media screen and (max-width: 900px) {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        padding: 2rem;
     }
 }
 .consortium{
@@ -118,7 +146,6 @@
         justify-content: center;
     }
 }
-
 .consortium_box {
     display: flex;
     border-radius: 1rem;
@@ -136,6 +163,10 @@
     background-color: #F2F2F2;
     box-shadow: 0 0.5rem 0.25rem rgb(0,0,0,0.3);
     transition: 0.2s;
+
+    @media screen and (max-width: 900px){
+        margin-right: 0;
+    }
     &:hover{
         scale: 1.1;
         background-color: $color-white;
@@ -247,6 +278,11 @@ $degrees: 5deg;
         border: 3px solid #1D2E5D;
         box-shadow: #1A202C;
         transition: all .2s ease;
+        @media screen and (min-width: 1600px) {
+            height: 0.75rem;
+            width: 0.75rem;
+            border: 5px solid #1D2E5D;
+        }
 
         &:hover {
             transform: scale(1.5);

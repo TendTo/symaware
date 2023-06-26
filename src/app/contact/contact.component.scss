@@ -1,10 +1,16 @@
 .wrapper_contact{
     margin: 0;
+  padding: 1rem 0;
     //position: relative;
   background-image: url("../../assets/images/vector-symaware_hero.svg");
   background-repeat: no-repeat ;
   background-size: cover;
   background-attachment: fixed;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
 }
 
 .wrapper_box {
@@ -12,6 +18,12 @@
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 10rem 1rem;
+    @media screen and (max-height: 900px) {
+      padding: 0 1rem 2rem 1rem;
+    }
+    @media screen and (min-width: 1600px) {
+      padding: 4rem 1rem;
+    }
     &__contacts {
         background-color: #F5F5F5;
         border-radius: 1rem;
@@ -19,6 +31,14 @@
         width: 22.5rem;
         padding: 1rem 2rem 2rem 2rem;
         margin: 2rem;
+      @media screen and (max-height: 900px) {
+        margin: 1rem;
+        width: 20rem;
+      }
+      @media screen and (min-width: 1600px) {
+        height: 22.5rem;
+        width: 30rem;
+      }
         box-shadow: 0 0.5rem 0.25rem rgb(0,0,0,0.3);
     }
 
@@ -45,9 +65,12 @@
         }
         &__img {
             height: auto;
-            width: 25px;
+            width: 1.5rem;
             align-self: center;
             margin-right: 1.5rem;
+            @media screen and (min-width: 1600px) {
+              width: 2.5rem;
+            }
             &_big{
               height: 100px;
               margin-right: 1rem;

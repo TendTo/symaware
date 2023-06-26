@@ -19,9 +19,16 @@ body {
   max-width: 100%;
   scroll-behavior: smooth;
   overflow-x: hidden;
+
+  @media screen and (max-width: 1080px) {
+    font-size: 85%;
+  }
+  @media screen and (min-width: 1600px) {
+    font-size: 115%;
+  }
 }
 
-html, body { height: 100%; }
+
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 button {

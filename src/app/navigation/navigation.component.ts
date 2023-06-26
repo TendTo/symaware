@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input, Output, EventEmitter, ElementRef, ViewChild} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
@@ -8,10 +8,28 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 
 export class NavigationComponent {
-  constructor(
+
+    constructor(
       private router: Router,
-      private route: ActivatedRoute
-) {}
+      private route: ActivatedRoute) {}
+    visible = false;
+    @ViewChild('dropdown')menuToggle:ElementRef<HTMLElement>;
+    nav = document.querySelectorAll('.container-mob-nav')
+    toggle() {
+        this.visible = !this.visible
+        if (!this.visible){
+            this.menuToggle.nativeElement.classList.add("toggle-bar");
+        }
+        else {
+            this.menuToggle.nativeElement.classList.remove("toggle-bar");
+        }
+    }
+
+    onScroll () {
+        // if(window.pageYOffset >=  this.nav.parentNode.offsetTop){
+        //
+        // }
+    }
 }
 
 

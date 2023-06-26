@@ -18,7 +18,7 @@
 <!--        <a class="search__item">-->
 <!--            Institutions-->
 <!--        </a>-->
-        <mat-form-field class="">
+        <mat-form-field class="inst_sort">
             <mat-label>Institutions</mat-label>
             <mat-select [(value)]="selected">
                 <mat-option>
@@ -40,31 +40,32 @@
                 <div class="wrapper_profile">
                     <img class="profile" src="{{leader.image}}">
                 </div>
-
-                <h2 class="leader__name">{{leader.name}}</h2>
-                <p class="leader__role">{{leader.role}}</p>
+                <div class="wrapper_names">
+                    <p class="leader__name">{{leader.name}}</p>
+                    <p class="leader__role">{{leader.role}}</p>
+                </div>
                 <div class="container__company">
                     <img class="company" src="{{leader.companyLogo}}">
                 </div>
             </div>
         </div>
     </div>
-    <div class="wrapper_profile__expanded">
-            <div class="expanded_logo">
-                <img class="expanded_logo__img" src="assets/images/consortium/mpi.png">
-            </div>
-            <div class="expanded_photo">
-                <img class="expanded_photo__img" src="assets/images/people/sadegh-soudjani.png">
-            </div>
-            <h2 class="expanded_name"> Sadegh Soudjani</h2>
-            <p class="expanded_role">Project Coordinator</p>
-            <p class="paragraph">
-                Max Planck Institute for Software Systems (MPI-SWS) studies the principles of efficient,
-                dependable, secure, and usable computing systems, as well as their interaction with the physical
-                and social context in which they operate. The Institute conducts foundational research in relevant
-                areas of computer science and beyond, covering theory, empirical analysis, and data-driven investigation.
-            </p>
-    </div>
+<!--    <div class="wrapper_profile__expanded">-->
+<!--            <div class="expanded_logo">-->
+<!--                <img class="expanded_logo__img" src="assets/images/consortium/mpi.png">-->
+<!--            </div>-->
+<!--            <div class="expanded_photo">-->
+<!--                <img class="expanded_photo__img" src="assets/images/people/sadegh-soudjani.png">-->
+<!--            </div>-->
+<!--            <h2 class="expanded_name"> Sadegh Soudjani</h2>-->
+<!--            <p class="expanded_role">Project Coordinator</p>-->
+<!--            <p class="paragraph">-->
+<!--                Max Planck Institute for Software Systems (MPI-SWS) studies the principles of efficient,-->
+<!--                dependable, secure, and usable computing systems, as well as their interaction with the physical-->
+<!--                and social context in which they operate. The Institute conducts foundational research in relevant-->
+<!--                areas of computer science and beyond, covering theory, empirical analysis, and data-driven investigation.-->
+<!--            </p>-->
+<!--    </div>-->
 
     <div *ngIf="(leaders | filter: selected).length > 0" class="divide_section"></div>
     <h2 class="heading_secondary">
@@ -75,8 +76,10 @@
             <div class="wrapper_profile">
                 <img class="profile" src="{{member.image}}">
             </div>
-            <h2 class="leader__name">{{member.name}}</h2>
-            <p class="leader__role">{{member.description}}</p>
+            <div class="wrapper_names">
+                <p class="leader__name">{{member.name}}</p>
+                <p class="leader__role">{{member.description}}</p>
+            <div>
         </div>
     </div>
     <div class="u-margin-bottom"></div>

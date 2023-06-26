@@ -10,6 +10,9 @@
     @extend .heading_primary;
     color: $color-white !important;
   }
+  @media screen and (min-width: 1600px) {
+    font-size: 2.8rem;
+  }
 }
 
 .heading_secondary{
@@ -22,12 +25,18 @@
     @extend .heading_secondary;
     color: $color-white !important;
   }
+  @media screen and (min-width: 1600px) {
+    font-size: 2.1rem;
+  }
 }
 
 .paragraph {
   font-size: 1rem;
   font-weight: 400;
   color: $color-font-blue;
+  @media screen and (min-width: 1600px) {
+    font-size: 1.5rem;
+  }
 }
 
 .paragraph__highlighted {
@@ -42,6 +51,9 @@
   &__light {
     @extend .paragraph__highlighted;
     color: $color-font-blue;
+  }
+  @media screen and (min-width: 1600px) {
+    font-size: 1.5rem;
   }
 }
 

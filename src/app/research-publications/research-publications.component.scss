@@ -3,12 +3,22 @@
 .wrapper_research {
     margin: 2rem 8rem;
     min-height: 55vh;
+
+    @media screen and (max-width: 900px) {
+        margin: 2rem;
+    }
     .wrapper_categories {
         display: flex;
         justify-content: flex-start;
         align-content: flex-start;
         flex-flow: row wrap;
         width: 100%;
+        @media screen and (max-width: 900px) {
+            & > div:first-child {
+                flex: 1 0 100%;
+            }
+            margin-bottom: 2rem;
+        }
     }
     .wrapper_years{
         margin-bottom: 2rem;
@@ -19,7 +29,9 @@
     flex-flow: column wrap;
     margin-bottom: 2rem;
     width: 70%;
-
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
     &__title{
         font-size: 1.3rem !important;
     }

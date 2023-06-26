@@ -2,19 +2,28 @@
 
 .wrapper_consortium{
   margin: 0;
-  padding: 4rem;
+  padding: 2rem 6.5rem 4rem 6.5rem;
   background-image: url("../../assets/images/vector-symaware_hero.svg");
   background-repeat: no-repeat ;
   background-size: cover;
   background-attachment: fixed;
+
+  @media screen and (max-width: 900px) {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 2rem;
+  }
 }
 .consortium{
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  @media screen and (max-width: 1080px) {
+    justify-content: center;
+  }
 }
-
 .consortium_box {
   display: flex;
   border-radius: 1rem;
@@ -29,9 +38,13 @@
   justify-content: flex-start;
   align-items: center;
   flex-flow: row wrap;
-  box-shadow: 0 0.5rem 0.25rem rgb(0,0,0,0.3);
   background-color: #F2F2F2;
+  box-shadow: 0 0.5rem 0.25rem rgb(0,0,0,0.3);
   transition: 0.2s;
+
+  @media screen and (max-width: 900px){
+    margin-right: 0;
+  }
   &:hover{
     scale: 1.1;
     background-color: $color-white;
@@ -47,6 +60,7 @@
   &__text {
     display: block;
     font-size: 0.9rem;
+    color: inherit;
   }
 
   &__members {
@@ -57,4 +71,3 @@
     width: auto;
   }
 }
-
