@@ -46,9 +46,15 @@
     align-items: center;
   }
 
+  .paragraph {
+    font-size: 1rem; /* Adjust font size*/
+    margin-top: 1rem; /* Adjust spacing */
+  }
+
+
   &__flag {
     width: auto;
-    height: 96px;
+    height: 98px; /* Size of Funding Image */
     margin-right: 1rem;
     @media screen and (max-width: 900px) {
       margin-right: 0;
