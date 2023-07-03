@@ -16,10 +16,10 @@ import { TeamComponent } from './team/team.component';
 import { ResearchPublicationsComponent } from './research-publications/research-publications.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { BackdropComponent } from './backdrop/backdrop.component';
 import { FooterComponent } from './footer/footer.component';
 import { NewsComponent } from './news/news.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -33,10 +33,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     ResearchPublicationsComponent,
     ContactComponent,
     PageNotFoundComponent,
-    BackdropComponent,
     FooterComponent,
     NewsComponent,
     FilterPipe,
+    HeaderComponent,
   ],
     imports: [
         BrowserModule,

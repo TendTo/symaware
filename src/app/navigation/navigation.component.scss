@@ -4,7 +4,7 @@
     display: none;
     width: 100%;
     background: #F5F5F5;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
     min-height: 2rem;
     @media screen and (min-width: 1600px){
       min-height: 4rem;
@@ -111,7 +111,7 @@
 .navicon {
   width: 30px;
   height: 30px;
-  padding: 0rem;
+  padding: 0;
   position: absolute;
   cursor: pointer;
   -webkit-user-select: none; /* Chrome all / Safari all */

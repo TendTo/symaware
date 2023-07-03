@@ -38,12 +38,14 @@
   justify-content: flex-start;
   align-items: center;
   flex-flow: row wrap;
-  background-color: #F2F2F2;
+  background-color: rgb(#F2F2F2, 0.95);
   box-shadow: 0 0.5rem 0.25rem rgb(0,0,0,0.3);
   transition: 0.2s;
 
   @media screen and (max-width: 900px){
     margin-right: 0;
+    min-width: 20rem;
+    max-height: 20rem;
   }
   &:hover{
     scale: 1.1;
@@ -61,6 +63,10 @@
     display: block;
     font-size: 0.9rem;
     color: inherit;
+    margin: 0.5rem 0;
+    @media screen and (max-width: 900px){
+      margin: 1rem 0;
+    }
   }
 
   &__members {
