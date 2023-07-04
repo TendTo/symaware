@@ -1,89 +1,142 @@
-<div class="wrapper_research">
-    <div class="wrapper_categories">
-        <div class="u-margin-right">
-            <button class="cat-button heading_primary" (click)="selected = 'all'; sort_selected = 'all'">
-                All Publications
-            </button>
-        </div>
-        <button class="paragraph cat-button u-margin-right" (click)="selected = 'all'; sort_selected = 'all'">
-            All
-        </button>
-        <button class="paragraph cat-button u-margin-right" (click)="selected='deliverables'">
-            Deliverables
-        </button>
-        <button class="paragraph cat-button" (click)="selected='research'">
-            Research Papers
-        </button>
+<div class="wrapper_research a-fade-in">
+  <div class="wrapper_categories">
+    <div class="u-margin-right">
+      <button
+        class="cat-button heading_primary u-text-underline__sand"
+        (click)="selected = 'all'; sort_selected = 'all'"
+      >
+        All Publications
+      </button>
     </div>
-    <div class="wrapper_years">
-        <div *ngIf="selected == 'research' && publications.length > 0">
-            <button class="paragraph u-margin-right cat-button" (click)="sort_selected = '2022'">
-                2022
-            </button>
-            <button class="paragraph cat-button" (click)="sort_selected = '2023'">
-                2023
-            </button>
-        </div>
-        <div *ngIf="selected == 'deliverables' && deliverables.length > 0">
-            <button class="paragraph u-margin-right cat-button" (click)="sort_selected = '1'">
-                WP1
-            </button>
-            <button class="paragraph u-margin-right cat-button" (click)="sort_selected = '2'">
-                WP2
-            </button>
-            <button class="paragraph u-margin-right cat-button" (click)="sort_selected = '3'">
-                WP3
-            </button>
-            <button class="paragraph u-margin-right cat-button" (click)="sort_selected = '4'">
-                WP4
-            </button>
-            <button class="paragraph u-margin-right cat-button" (click)="sort_selected = '5'">
-                WP5
-            </button>
-            <button class="paragraph u-margin-right cat-button" (click)="sort_selected = '6'">
-                WP6
-            </button>
-            <button class="paragraph u-margin-right cat-button" (click)="sort_selected = '7'">
-                WP7
-            </button>
-        </div>
+    <button
+      class="paragraph cat-button u-margin-right dynamic--underline"
+      (click)="selected = 'all'; sort_selected = 'all'"
+    >
+      All
+    </button>
+    <button
+      class="paragraph cat-button u-margin-right dynamic--underline"
+      (click)="selected = 'deliverables'"
+    >
+      Deliverables
+    </button>
+    <button
+      class="paragraph cat-button dynamic--underline"
+      (click)="selected = 'research'"
+    >
+      Research Papers
+    </button>
+  </div>
+  <div class="wrapper_years">
+    <div
+      class="a-fade-in"
+      *ngIf="selected == 'research' && publications.length > 0"
+    >
+      <button
+        class="paragraph u-margin-right cat-button"
+        (click)="sort_selected = '2022'"
+      >
+        2022
+      </button>
+      <button class="paragraph cat-button" (click)="sort_selected = '2023'">
+        2023
+      </button>
     </div>
-    <div class="wrapper_publications">
-        <div *ngIf="selected == 'all' || selected == 'research'">
-            <div class="publication" *ngFor="let publication of publications">
-                    <div class="publication__title paragraph__highlighted__light u-text-underline">
-                        {{publication.title}}
-                    </div>
-                    <div class="publication__authors paragraph__highlighted__light">
-                        Authors: {{publication.authors}}
-                    </div>
-            </div>
-            <div *ngIf="publications.length === 0 && selected == 'research' ">
-                <div class="publication">
-                    No Publications
-                </div>
-            </div>
+    <div
+      class="a-fade-in"
+      *ngIf="selected == 'deliverables' && deliverables.length > 0"
+    >
+      <button
+        class="paragraph u-margin-right cat-button"
+        (click)="sort_selected = '1'"
+      >
+        WP1
+      </button>
+      <button
+        class="paragraph u-margin-right cat-button"
+        (click)="sort_selected = '2'"
+      >
+        WP2
+      </button>
+      <button
+        class="paragraph u-margin-right cat-button"
+        (click)="sort_selected = '3'"
+      >
+        WP3
+      </button>
+      <button
+        class="paragraph u-margin-right cat-button"
+        (click)="sort_selected = '4'"
+      >
+        WP4
+      </button>
+      <button
+        class="paragraph u-margin-right cat-button"
+        (click)="sort_selected = '5'"
+      >
+        WP5
+      </button>
+      <button
+        class="paragraph u-margin-right cat-button"
+        (click)="sort_selected = '6'"
+      >
+        WP6
+      </button>
+      <button
+        class="paragraph u-margin-right cat-button"
+        (click)="sort_selected = '7'"
+      >
+        WP7
+      </button>
+    </div>
+  </div>
+  <div class="wrapper_publications">
+    <div class="a-fade-in" *ngIf="selected == 'all' || selected == 'research'">
+      <div class="publication" *ngFor="let publication of publications">
+        <div
+          class="publication__title paragraph__highlighted__light u-text-underline"
+        >
+          <a href="{{ publication.link }}" target="_blank">
+            {{ publication.title }}
+          </a>
         </div>
+        <div class="publication__authors paragraph__highlighted__light">
+          Authors: {{ publication.authors }}
+        </div>
+      </div>
+      <div *ngIf="publications.length === 0 && selected == 'research'">
+        <div class="publication">No Publications</div>
+      </div>
+    </div>
 
-<!--        <div *ngIf="deliverables.length == 0">-->
-<!--            <div class="publication">-->
-<!--                No Deliverables-->
-<!--            </div>-->
-<!--        </div>-->
-        <div *ngIf="selected == 'all' || selected == 'deliverables'">
-            <div class="publication" *ngFor="let deliverable of deliverables">
+    <!--        <div *ngIf="deliverables.length == 0">-->
+    <!--            <div class="publication">-->
+    <!--                No Deliverables-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <div
+      class="a-fade-in"
+      *ngIf="selected == 'all' || selected == 'deliverables'"
+    >
+      <div class="publication" *ngFor="let deliverable of deliverables">
+        <div
+          *ngIf="
+            deliverable.work_package == sort_selected || sort_selected == 'all'
+          "
+        >
+          <div
+            class="publication__title paragraph__highlighted__light u-text-underline"
+          >
+            <a href="{{ deliverable.link }}" target="_blank">
+              {{ deliverable.title }}
+            </a>
+          </div>
 
-                    <div *ngIf="deliverable.work_package == sort_selected || sort_selected == 'all'">
-                        <a href="{{deliverable.link}}" target="_blank">
-                            <div class="publication__title paragraph__highlighted__light u-text-underline">
-                                {{deliverable.id}}.{{deliverable.title}}
-                            </div>
-                        </a>
-                        <div class="publication__authors paragraph__highlighted__light">
-                            Deliverable Number: {{deliverable.number}}
-                        </div>
-                    </div>
-            </div>
+          <div class="publication__authors paragraph__highlighted__light">
+            Deliverable Number: {{ deliverable.number }}
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>

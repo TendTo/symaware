@@ -1,59 +1,72 @@
 @import "../../scss/variables";
 
 .container-nav {
-    display: none;
-    width: 100%;
-    background: #F5F5F5;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
-    min-height: 2rem;
-    @media screen and (min-width: 1600px){
-      min-height: 4rem;
+  display: none;
+  width: 100%;
+  background: #f5f5f5;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
+  min-height: 2rem;
+  @media screen and (min-width: 1600px) {
+    min-height: 4rem;
+  }
+  @media screen and (min-width: 900px) {
+    display: block;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    .navbar-link {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
     }
-    @media screen and (min-width: 900px){
-      display: block;
+    .navbar-item {
+      font-size: 1rem;
+      padding: 0 1rem;
+      height: 100%;
+      display: flex;
+      align-content: center;
+      align-self: center;
+      align-items: center;
+      text-decoration: none;
+      color: $color-font-blue;
+      font-weight: 400;
+      transition: 0.3s ease-out;
+      position: relative;
+      @media screen and (min-width: 1600px) {
+        font-size: 1.25rem;
+      }
+      &__underlined {
+        text-decoration: underline !important;
+        color: $color-black;
+        text-decoration-color: $color-black !important;
+        transition: 0.3s;
+      }
+      &:hover:not(.navbar-brand) {
+        background-color: rgb($color-dark-blue, 0.95);
+        text-decoration-color: $color-sand !important;
+        color: white;
+        transition: 0.1s ease-out;
+      }
     }
 
-    nav{
-        display: flex;
-        justify-content: space-between;
-
-        .navbar-link{
-          display: flex;
-          justify-content: flex-end;
-          align-content: center;
-        }
-          .navbar-item{
-            font-size: 1rem;
-            padding: 1rem;
-            align-self: center;
-            text-decoration: none;
-            color: $color-font-blue;
-            font-weight: 400;
-            @media screen and (min-width: 1600px){
-              font-size: 1.25rem;
-            }
-            &__underlined{
-              text-decoration: underline !important;
-              color: $color-black;
-              text-decoration-color: $color-black !important;
-            }
-        }
-
-        .navbar-brand {
-          padding: 1rem;
-          margin-left: 2rem;
-        }
-
-        .logo{
-          width: 8rem;
-          height: auto;
-        }
+    .navbar-brand {
+      padding: 1rem;
+      margin-left: 2rem;
     }
+
+    .logo {
+      width: 8rem;
+      height: auto;
+    }
+  }
 }
 
 .container-mob-nav {
   width: 100%;
-  background: #F5F5F5;
+  background: #f5f5f5;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
   min-height: 2rem;
   position: sticky;
@@ -62,27 +75,27 @@
     display: block;
   }
 
-    .mobile-item{
-      display: flex;
-      align-content: center;
-      align-items: center;
-      text-decoration: none;
-      height: 2rem;
-      padding: 1rem;
-      font-size: 1.1rem;
-    }
+  .mobile-item {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 2rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
 
-    .close {
-      height: 100%;
-      width: 4rem;
-    }
+  .close {
+    height: 100%;
+    width: 4rem;
+  }
 
-    .mobile-brand {
-      display: flex;
-      padding: 1rem;
-      justify-content: flex-end;
-      height: 2rem;
-    }
+  .mobile-brand {
+    display: flex;
+    padding: 1rem;
+    justify-content: flex-end;
+    height: 2rem;
+  }
 }
 
 //.path {
@@ -115,9 +128,9 @@
   position: absolute;
   cursor: pointer;
   -webkit-user-select: none; /* Chrome all / Safari all */
-  -moz-user-select: none;    /* Firefox all */
-  -ms-user-select: none;     /* IE 10+ */
-  user-select: none;         /* Likely future */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
   box-sizing: border-box;
 }
 
@@ -126,8 +139,8 @@
   width: 20px;
   height: 2px;
   position: absolute;
-  transition: all .2s ease-out;
-  background-color: #BDBDBD;
+  transition: all 0.2s ease-out;
+  background-color: #bdbdbd;
 }
 
 .navicon-bar:first-child {
@@ -161,7 +174,7 @@
   display: none;
 }
 
-.toggle-bar{
+.toggle-bar {
   display: none;
 }
 

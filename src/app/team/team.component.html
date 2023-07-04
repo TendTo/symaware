@@ -1,88 +1,108 @@
-<div class="team_page">
-    <div class="search">
-        <h1 class="heading_primary u-text-underline__sand">
-            Meet the team
-        </h1>
-        <button class="paragraph search__button" (click)="selected = all">
-            Everyone
-        </button>
-        <button class="paragraph search__button" (click)="selected = 'academic'">
-            Academic Partners
-        </button>
-        <button class="paragraph search__button" (click)="selected = 'industry'">
-            Industrial Partners
-        </button>
-<!--        <button class="paragraph search__button" (click)="selected = 'phd'">-->
-<!--            Doctoral Trainees-->
-<!--        </button>-->
-<!--        <a class="search__item">-->
-<!--            Institutions-->
-<!--        </a>-->
-        <mat-form-field class="inst_sort">
-            <mat-label>Institutions</mat-label>
-            <mat-select [(value)]="selected">
-                <mat-option>
-                    All
-                </mat-option>
-                <mat-option [value] = "inst.displayName" *ngFor="let inst of institutions">
-                    {{inst.displayName}}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-
-    </div>
-    <div *ngIf="(leaders | filter: selected).length > 0">
-        <h2 class="heading_secondary">
-            Team Leaders
-        </h2>
-        <div class="wrapper_leaders">
-            <div class="leader" *ngFor="let leader of leaders | filter: selected">
-                <div class="wrapper_profile">
-                    <img class="profile" src="{{leader.image}}">
-                </div>
-                <div class="wrapper_names">
-                    <p class="leader__name">{{leader.name}}</p>
-                    <p class="leader__role">{{leader.role}}</p>
-                </div>
-                <div class="container__company">
-                    <img class="company" src="{{leader.companyLogo}}">
-                </div>
-            </div>
-        </div>
-    </div>
-<!--    <div class="wrapper_profile__expanded">-->
-<!--            <div class="expanded_logo">-->
-<!--                <img class="expanded_logo__img" src="assets/images/consortium/mpi.png">-->
-<!--            </div>-->
-<!--            <div class="expanded_photo">-->
-<!--                <img class="expanded_photo__img" src="assets/images/people/sadegh-soudjani.png">-->
-<!--            </div>-->
-<!--            <h2 class="expanded_name"> Sadegh Soudjani</h2>-->
-<!--            <p class="expanded_role">Project Coordinator</p>-->
-<!--            <p class="paragraph">-->
-<!--                Max Planck Institute for Software Systems (MPI-SWS) studies the principles of efficient,-->
-<!--                dependable, secure, and usable computing systems, as well as their interaction with the physical-->
-<!--                and social context in which they operate. The Institute conducts foundational research in relevant-->
-<!--                areas of computer science and beyond, covering theory, empirical analysis, and data-driven investigation.-->
-<!--            </p>-->
-<!--    </div>-->
-
-    <div *ngIf="(leaders | filter: selected).length > 0" class="divide_section"></div>
-    <h2 class="heading_secondary">
-        Academics & Researchers
-    </h2>
+<div class="team_page a-fade-in">
+  <div class="search">
+    <h1 class="heading_primary u-text-underline__sand">Meet the team</h1>
+    <button
+      class="paragraph search__button dynamic--underline"
+      (click)="selected = all"
+    >
+      Everyone
+    </button>
+    <button
+      class="paragraph search__button dynamic--underline"
+      (click)="selected = 'academic'"
+    >
+      Academic Partners
+    </button>
+    <button
+      class="paragraph search__button dynamic--underline"
+      (click)="selected = 'industry'"
+    >
+      Industrial Partners
+    </button>
+    <!--        <button class="paragraph search__button" (click)="selected = 'phd'">-->
+    <!--            Doctoral Trainees-->
+    <!--        </button>-->
+    <!--        <a class="search__item">-->
+    <!--            Institutions-->
+    <!--        </a>-->
+    <mat-form-field class="inst_sort">
+      <mat-label>Institutions</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option> All </mat-option>
+        <mat-option
+          [value]="inst.displayName"
+          *ngFor="let inst of institutions"
+        >
+          {{ inst.displayName }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="" *ngIf="(leaders | filter : selected).length > 0">
+    <h2 class="heading_secondary dynamic--underline">Team Leaders</h2>
     <div class="wrapper_leaders">
-        <div class="leader" *ngFor="let member of members | filter: selected">
-            <div class="wrapper_profile">
-                <img class="profile" src="{{member.image}}">
-            </div>
-            <div class="wrapper_names">
-                <p class="leader__name">{{member.name}}</p>
-                <p class="leader__role">{{member.description}}</p>
-            <div>
+      <div
+        class="leader a-moveIn-left"
+        *ngFor="let leader of leaders | filter : selected"
+      >
+        <div class="wrapper_profile">
+          <img
+            class="profile"
+            src="{{ leader.image }}"
+            alt="{{ leader.name }}"
+          />
         </div>
+        <div class="wrapper_names">
+          <p class="leader__name">{{ leader.name }}</p>
+          <p class="leader__role">{{ leader.role }}</p>
+        </div>
+        <div class="container__company">
+          <img
+            class="company"
+            src="{{ leader.companyLogo }}"
+            alt="{{ leader.institution }}"
+          />
+        </div>
+      </div>
     </div>
-    <div class="u-margin-bottom"></div>
-</div>
+  </div>
+  <!--    <div class="wrapper_profile__expanded">-->
+  <!--            <div class="expanded_logo">-->
+  <!--                <img class="expanded_logo__img" src="assets/images/consortium/mpi.png">-->
+  <!--            </div>-->
+  <!--            <div class="expanded_photo">-->
+  <!--                <img class="expanded_photo__img" src="assets/images/people/sadegh-soudjani.png">-->
+  <!--            </div>-->
+  <!--            <h2 class="expanded_name"> Sadegh Soudjani</h2>-->
+  <!--            <p class="expanded_role">Project Coordinator</p>-->
+  <!--            <p class="paragraph">-->
+  <!--                Max Planck Institute for Software Systems (MPI-SWS) studies the principles of efficient,-->
+  <!--                dependable, secure, and usable computing systems, as well as their interaction with the physical-->
+  <!--                and social context in which they operate. The Institute conducts foundational research in relevant-->
+  <!--                areas of computer science and beyond, covering theory, empirical analysis, and data-driven investigation.-->
+  <!--            </p>-->
+  <!--    </div>-->
+
+  <div
+    *ngIf="(leaders | filter : selected).length > 0"
+    class="divide_section"
+  ></div>
+  <h2 class="heading_secondary dynamic--underline">Academics & Researchers</h2>
+  <div class="wrapper_leaders">
+    <div
+      class="leader"
+      *ngFor="let member of members | filter : selected"
+      [@inOutAnimation]
+    >
+      <div class="wrapper_profile">
+        <img class="profile" src="{{ member.image }}" alt="{{ member.name }}" />
+      </div>
+      <div class="wrapper_names">
+        <p class="leader__name">{{ member.name }}</p>
+        <p class="leader__role">{{ member.description }}</p>
+        <div></div>
+      </div>
+      <div style="margin-bottom: 4rem"></div>
     </div>
+  </div>
 </div>

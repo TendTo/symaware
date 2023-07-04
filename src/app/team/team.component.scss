@@ -1,151 +1,158 @@
 @import "../../scss/variables";
 
-.wrapper_leaders{
-    display: flex;
-    justify-content: flex-start;
-    flex-flow: wrap row;
-    margin-top: 2rem;
+.wrapper_leaders {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: wrap row;
+  margin-top: 2rem;
+  &:before {
+    opacity: 0;
+  }
+  &:after {
+    opacity: 1;
+  }
+  //&:hover .wrapper_profile__expanded{
+  //    display: flex;
+  //}
 
-    //&:hover .wrapper_profile__expanded{
-    //    display: flex;
-    //}
-
-    @media screen and (max-width: 900px) {
-        align-content: flex-start;
-        flex-flow: wrap column;
-        min-width: 25rem;
-    }
+  @media screen and (max-width: 900px) {
+    align-content: flex-start;
+    flex-flow: wrap column;
+    min-width: 25rem;
+  }
 }
 
-.team_page{
-    margin: 2rem 8rem 0 8rem;
-    @media screen and (max-width: 1080px) {
-        margin: 2rem 1rem;
-        padding: 0 1rem;
-    }
+.team_page {
+  margin: 2rem 8rem 0 8rem;
+  @media screen and (max-width: 1080px) {
+    margin: 2rem 1rem;
+    padding: 0 1rem;
+  }
 }
 
-.search{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
+  @media screen and (max-width: 900px) {
+    flex-flow: wrap;
+    align-items: flex-start;
+    justify-items: flex-start;
+  }
+
+  &__item {
+    margin-top: 1.9rem;
+    color: $color-font-blue;
+  }
+
+  &__button {
+    border: none;
+    background: none;
+    position: relative;
     @media screen and (max-width: 900px) {
-        flex-flow:  wrap;
-        align-items: flex-start;
-        justify-items: flex-start;
+      display: none;
     }
-
-    &__item{
-        margin-top: 1.9rem;
-        color: $color-font-blue;
+    &:hover {
+      cursor: pointer;
+      color: $color-black;
     }
-
-    &__button{
-        border: none;
-        background: none;
-        @media screen and (max-width: 900px) {
-            display: none;
-        }
-        &:hover{
-            cursor: pointer;
-            color: $color-black;
-        }
-    }
-
+  }
 }
 
-.leader{
-    display: flex;
-    justify-content: flex-start;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-    max-width: 10rem;
-    margin-right: 2rem;
-    transition: all 0.2s ease-out;
-
+.leader {
+  display: flex;
+  justify-content: flex-start;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  max-width: 11rem;
+  min-width: 11rem;
+  margin-right: 2rem;
+  transition: all 0.4s ease-out;
+  //opacity: 0;
+  @media screen and (max-width: 900px) {
+    align-content: flex-start;
+    align-items: flex-start;
+    justify-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    min-width: 20rem;
+    max-width: 20rem;
+    max-height: 10rem;
+  }
+  &__name {
+    font-size: 1rem;
+    margin: 0.5rem 0 0 0;
+    font-weight: 700;
+    text-align: center;
+    color: $color-dark-blue;
+    position: relative;
     @media screen and (max-width: 900px) {
-        align-content: flex-start;
-        align-items: flex-start;
-        justify-items: flex-end;
-        justify-content: flex-end;
-        margin-right: 0;
-        margin-bottom: 1rem;
-        min-width: 20rem;
-        max-width: 20rem;
-        max-height: 10rem;
+      margin: 0;
+      text-align: left;
     }
-    &__name {
-        font-size: 1rem;
-        margin: 0.5rem 0 0 0;
-        font-weight: 700;
-        text-align: center;
-        color: $color-dark-blue;
-        @media screen and (max-width: 900px) {
-            margin: 0;
-            text-align: left;
-        }
+  }
+  &__role {
+    margin: 0;
+    font-size: 1rem;
+    justify-self: center;
+    color: $color-dark-grey;
+    text-align: center;
+    @media screen and (max-width: 900px) {
+      text-align: start;
+      width: 80%;
     }
-    &__role {
-        margin: 0;
-        font-size: 1rem;
-        justify-self: center;
-        color: $color-dark-grey;
-        text-align: center;
-        @media screen and (max-width: 900px) {
-            text-align: start;
-            width: 80%;
-        }
-    }
+  }
 }
 .container__company {
-    min-height: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scale: 0.9;
+  min-height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 0.9;
+  @media screen and (max-width: 900px) {
+    justify-content: flex-start;
+    scale: 1;
+    margin-left: 2rem;
+    max-height: 2rem;
+  }
+  .company {
+    align-self: center;
+    justify-self: end;
+    height: auto;
+    width: auto;
+    max-width: 9rem;
+    max-height: 3rem;
     @media screen and (max-width: 900px) {
-        justify-content: flex-start;
-        scale: 1;
-        margin-left: 2rem;
-        max-height: 2rem;
     }
-    .company{
-        align-self: center;
-        justify-self: end;
-        height: auto;
-        width: auto;
-        max-width: 9rem;
-        max-height: 3rem;
-        @media screen and (max-width: 900px) {
-        }
-    }
+  }
 }
 .wrapper_profile {
-    border-radius: 50%;
-    max-height: 10rem;
-    overflow: hidden;
-    box-shadow: 0 0.25rem 0.5rem rgb(0,0,0,0.3);
+  border-radius: 50%;
+  max-height: 10rem;
+  overflow: hidden;
+  box-shadow: 0 0.25rem 0.5rem rgb(0, 0, 0, 0.3);
 }
 
-.profile{
-    height: auto;
-    width: 10rem;
-    box-shadow: 0 5px 10px rgb(0,0,0,0.3);
-    scale: 1.0;
+.profile {
+  height: auto;
+  width: 10rem;
+  box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
+  scale: 1;
+  transition: 0.35s ease-in-out;
+  &:hover {
+    scale: 1.1;
     transition: 0.35s ease-in-out;
-    &:hover{
-        scale: 1.1;
-        transition: 0.35s ease-in-out;
-    }
+  }
 }
 
-.divide_section{
-    margin: 2rem 0;
-    height: 0.25rem;
-    background-color: $color-sand;
+.divide_section {
+  margin: 2rem 0;
+  height: 0.25rem;
+  background-color: $color-sand;
 }
 
 //.wrapper_profile__expanded {
@@ -192,14 +199,20 @@
 //}
 
 .inst_sort {
-    @media screen and (max-width: 900px) {
-        width: 10rem;
-        height: auto;
-    }
+  @media screen and (max-width: 900px) {
+    width: 10rem;
+    height: auto;
+  }
 }
 .wrapper_names {
-    @media screen and (max-width: 900px) {
-        margin-top: 2.5rem;
-        margin-left: 2rem;
-    }
+  @media screen and (max-width: 900px) {
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+  }
+}
+@for $i from 1 through 12 {
+  .wrapper_leaders :nth-child(#{$i}n) {
+    animation-delay: #{$i * 0.1}s;
+    transition-delay: #{$i * 0.1}s;
+  }
 }

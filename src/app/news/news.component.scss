@@ -1,8 +1,8 @@
-.wrapper_news{
+.wrapper_news {
   margin: 0;
   //position: relative;
-  background-image: url("../../assets/images/vector-symaware_hero.svg");
-  background-repeat: no-repeat ;
+  background-image: url("../../assets/images/symaware/vector-symaware_hero.svg");
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -12,5 +12,4 @@
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 10rem 1rem;
-
 }

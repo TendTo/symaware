@@ -1,3 +1,5 @@
+@import "variables";
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -14,8 +16,23 @@
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    filter: blur(2px);
+    filter: blur(4px);
+    visibility: hidden;
     transform: translateX(-15rem);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    filter: blur(0);
+    transform: translate(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateY(50%);
   }
 
   100% {
@@ -24,36 +41,40 @@
     transform: translate(0);
   }
 }
-
 @keyframes fadeIn {
-  0%{
+  0% {
+    opacity: 0;
+    filter: blur(2px);
+  }
+  33% {
     opacity: 0;
   }
-  50%{
-    opacity: 0;
-  }
-  100%{
+  100% {
     opacity: 1;
+    filter: blur(0);
   }
 }
 
 .a-moveIn-right {
-  animation: moveInRight 0.625s ease-in-out;
-  &__delayed{
+  animation: moveInRight 0.5s ease-in-out;
+  &__delayed {
     @extend .a-moveIn-right;
     transition-delay: 625ms;
   }
 }
 .a-moveIn-left {
-  animation: moveInLeft 0.625s ease-in-out;
+  animation: moveInLeft 0.5s ease-in-out;
+  animation-fill-mode: forwards;
 
-  &__delayed{
+  &__delayed {
     @extend .a-moveIn-left;
     transition-delay: 625ms;
   }
 }
 
 .a-fade-in {
-  animation: fadeIn 0.625s ease-in-out;
+  animation: fadeIn 0.5s cubic-bezier(0.57, 0.21, 0.69, 1.25);
 }
-
+.a-moveIn-bottom {
+  animation: moveInBottom 0.5s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
