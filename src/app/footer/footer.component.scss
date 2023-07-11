@@ -65,14 +65,14 @@
 .social_media {
   &__links {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
   }
 }
 
 .icon {
   width: 2rem;
   height: auto;
-  margin: 0 0.5rem;
+
   @media screen and (min-width: 1600px) {
     width: 3rem;
   }

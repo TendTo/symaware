@@ -1,79 +1,79 @@
-@import "../../scss/variables";
+@import '../../scss/variables';
 
 .wrapper_consortium {
-  margin: 0;
-  padding: 2rem 6.5rem 4rem 6.5rem;
-  background-image: url("../../assets/images/symaware/vector-symaware_hero.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+    margin: 0;
+    padding: 2rem 6.5rem 4rem 6.5rem;
+    background-image: url('../../assets/images/symaware/vector-symaware_hero.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 
-  @media screen and (max-width: 900px) {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    padding: 2rem;
-  }
+    @media screen and (max-width: 900px) {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        padding: 2rem;
+    }
 }
 .consortium {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
-  @media screen and (max-width: 1080px) {
-    justify-content: center;
-  }
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    @media screen and (max-width: 1080px) {
+        justify-content: center;
+    }
 }
 .consortium_box {
-  display: flex;
-  border-radius: 1rem;
-  max-height: 18rem;
-  max-width: 22rem;
-  min-height: 12rem;
-  min-width: 22rem;
-  margin-bottom: 2rem;
-  margin-right: 1rem;
-  padding: 1.5rem;
-  align-content: space-between;
-  justify-content: flex-start;
-  align-items: center;
-  flex-flow: row wrap;
-  background-color: rgb(#f2f2f2, 0.95);
-  box-shadow: 0 0.5rem 0.25rem rgb(0, 0, 0, 0.3);
-  transition: 0.2s;
-
-  @media screen and (max-width: 900px) {
-    margin-right: 0;
-    min-width: 20rem;
-    max-height: 20rem;
-  }
-  &:hover {
-    scale: 1.1;
-    background-color: $color-white;
-    transition: 0.2s;
-  }
-
-  &__image {
-    max-height: 3rem;
-    min-height: 3rem;
     display: flex;
-    align-content: center;
-  }
-  &__text {
-    display: block;
-    font-size: 0.9rem;
-    color: inherit;
-    margin: 0.5rem 0;
-    @media screen and (max-width: 900px) {
-      margin: 1rem 0;
-    }
-  }
+    border-radius: 1rem;
+    max-height: 18rem;
+    max-width: 22rem;
+    min-height: 12rem;
+    min-width: 22rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    padding: 1.5rem;
+    align-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: row wrap;
+    background-color: rgb(#f2f2f2, 0.92);
+    box-shadow: 0 0.5rem 0.25rem rgb(0, 0, 0, 0.3);
+    transition: 0.2s;
 
-  &__members {
-    align-self: center;
-    max-height: 3rem;
-    max-width: 10rem;
-    height: 100%;
-    width: auto;
-  }
+    @media screen and (max-width: 900px) {
+        margin-right: 0;
+        min-width: 20rem;
+        max-height: 20rem;
+    }
+    &:hover {
+        scale: 1.1;
+        background-color: $color-white;
+        transition: 0.2s;
+    }
+
+    &__image {
+        max-height: 3rem;
+        min-height: 3rem;
+        display: flex;
+        align-content: center;
+    }
+    &__text {
+        display: block;
+        font-size: 0.9rem;
+        color: inherit;
+        margin: 0.5rem 0;
+        @media screen and (max-width: 900px) {
+            margin: 1rem 0;
+        }
+    }
+
+    &__members {
+        align-self: center;
+        max-height: 3rem;
+        max-width: 10rem;
+        height: 100%;
+        width: auto;
+    }
 }

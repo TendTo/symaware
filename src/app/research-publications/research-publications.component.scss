@@ -1,49 +1,72 @@
-@import "../../scss/variables";
+@import '../../scss/variables';
 
 .wrapper_research {
-  margin: 2rem 8rem;
-  min-height: 55vh;
+    margin: 2rem 8rem;
+    min-height: 55vh;
 
-  @media screen and (max-width: 900px) {
-    margin: 2rem;
-  }
-  .wrapper_categories {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    width: 100%;
     @media screen and (max-width: 900px) {
-      & > div:first-child {
-        flex: 1 0 100%;
-      }
-      flex-flow: row wrap;
-      margin-bottom: 2rem;
+        margin: 2rem;
     }
-  }
-  .wrapper_years {
-    margin-bottom: 2rem;
-  }
+    .wrapper_categories {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        width: 100%;
+        @media screen and (max-width: 900px) {
+            & > div:first-child {
+                flex: 1 0 100%;
+            }
+            flex-flow: row wrap;
+            margin-bottom: 2rem;
+        }
+    }
+    .wrapper_years {
+        margin-bottom: 2rem;
+    }
 }
 .publication {
-  display: flex;
-  flex-flow: column wrap;
-  margin-bottom: 2rem;
-  width: 70%;
-  transition: 0.5s;
-  @media screen and (max-width: 900px) {
-    width: 100%;
-  }
-  &__title {
-    font-size: 1.3rem !important;
-  }
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 2rem;
+    width: 70%;
+    transition: 0.5s;
+    @media screen and (max-width: 900px) {
+        width: 100%;
+    }
+    &__title {
+        font-size: 1.3rem !important;
+        font-weight: 600;
+    }
+    &__authors {
+        margin-top: 0.25rem;
+        font-size: 0.9rem !important;
+        font-weight: 500;
+    }
+    &__button {
+        margin-top: 1rem;
+        background-color: #bebdbd;
+        border-radius: 0.25rem;
+        border: 0;
+        transition: 0.25s ease-out;
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        color: $color-black;
+        box-shadow: rgb($color-black, 0.25) 0 5px 10px;
+        &:hover {
+            background-color: $color-dark-blue;
+            color: $color-white;
+            transition: 0.25s ease-out;
+            cursor: pointer;
+        }
+    }
 }
 .cat-button {
-  border: none;
-  background: none;
-  position: relative;
-  &:hover {
-    cursor: pointer;
-    color: $color-black;
-  }
+    border: none;
+    background: none;
+    position: relative;
+    &:hover {
+        cursor: pointer;
+        color: $color-black;
+    }
 }

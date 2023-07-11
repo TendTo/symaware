@@ -12,5 +12,6 @@ export const publications = [
       "Siyuan Liu, Adnane Saoud, Pushpak Jagtap, Dimos V. Dimarogonas, Majid Zamani",
     link: "https://arxiv.org/abs/2203.10041",
     year: "2022",
+    doi: "10.48550/arXiv.2203.10041",
   },
 ];

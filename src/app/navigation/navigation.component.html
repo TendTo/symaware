@@ -1,124 +1,123 @@
-<div class="container-nav">
-  <nav role="navigation">
-    <div class="navbar-brand">
-      <a class="" routerLink="/">
-        <img
-          class="logo"
-          src="../../assets/icons/logo-symaware.png"
-          alt="SymAware Logo"
-        />
-        <!--                <div class="circle">-->
-        <!--                    <div class="path">-->
-        <!--                    </div>-->
-        <!--                </div>-->
-      </a>
-    </div>
-    <div class="navbar-link">
-      <a
-        class="navbar-item"
-        routerLink="/"
-        routerLinkActive="navbar-item__underlined"
-      >
-        Home
-      </a>
-      <a
-        class="navbar-item"
-        routerLink="research-publications"
-        routerLinkActive="navbar-item__underlined"
-      >
-        Research & Publications
-      </a>
-      <a
-        class="navbar-item"
-        routerLink="team"
-        routerLinkActive="navbar-item__underlined"
-      >
-        Team
-      </a>
-      <a
-        class="navbar-item"
-        routerLink="consortium"
-        routerLinkActive="navbar-item__underlined"
-      >
-        Consortium
-      </a>
-      <a
-        class="navbar-item"
-        routerLink="contacts"
-        routerLinkActive="navbar-item__underlined"
-      >
-        Contact Us
-      </a>
-      <a
-        class="navbar-item"
-        href="https://symaware.copernica.tue.nl/subscribe_symaware"
-        target="_blank"
-      >
-        Join our newsletter
-      </a>
-    </div>
-  </nav>
+<div class="container-nav" #navbar>
+    <nav class="navbar" role="navigation">
+        <div class="navbar-brand">
+            <a class="" routerLink="/">
+                <img
+                    class="logo"
+                    src="../../assets/icons/logo-symaware.png"
+                    alt="SymAware Logo"
+                />
+            </a>
+        </div>
+        <div class="navbar-link">
+            <a
+                class="navbar-item"
+                routerLink="/"
+                routerLinkActive="navbar-item__underlined"
+            >
+                Home
+            </a>
+            <a
+                class="navbar-item"
+                routerLink="research-publications"
+                routerLinkActive="navbar-item__underlined"
+            >
+                Research & Publications
+            </a>
+            <a
+                class="navbar-item"
+                routerLink="team"
+                routerLinkActive="navbar-item__underlined"
+            >
+                Team
+            </a>
+            <a
+                class="navbar-item"
+                routerLink="consortium"
+                routerLinkActive="navbar-item__underlined"
+            >
+                Consortium
+            </a>
+            <a
+                class="navbar-item"
+                routerLink="contacts"
+                routerLinkActive="navbar-item__underlined"
+            >
+                Contact Us
+            </a>
+            <a
+                class="navbar-item"
+                href="https://symaware.copernica.tue.nl/subscribe_symaware"
+                target="_blank"
+            >
+                Join our newsletter
+            </a>
+        </div>
+    </nav>
 </div>
-<div class="container-mob-nav" (window:scroll)="onScroll()">
-  <nav role="navigation">
-    <div class="dropdown">
-      <a class="mobile-item" routerLink="/">
-        <img
-          class="mobile_logo"
-          src="../../assets/icons/logo-symaware.png"
-          alt="SymAware Logo"
-        />
-      </a>
-      <div class="mobile-item">
-        <input type="checkbox" class="nav-toggle" id="nav-toggle" />
-        <label class="navicon" for="nav-toggle" (click)="toggle()">
-          <span *ngFor="let i of [1, 2, 3]" class="navicon-bar"></span>
-        </label>
-      </div>
-    </div>
-    <div class="toggle-bar" #dropdown>
-      <a
-        class="mobile-item"
-        routerLink="/"
-        routerLinkActive="navbar-item__underlined"
-      >
-        Home
-      </a>
-      <a
-        class="mobile-item"
-        routerLink="research-publications"
-        routerLinkActive="navbar-item__underlined"
-      >
-        Research & Publications
-      </a>
-      <a
-        class="mobile-item"
-        routerLink="team"
-        routerLinkActive="navbar-item__underlined"
-      >
-        Team
-      </a>
-      <a
-        class="mobile-item"
-        routerLink="consortium"
-        routerLinkActive="navbar-item__underlined"
-      >
-        Consortium
-      </a>
-      <a
-        class="mobile-item"
-        routerLink="contacts"
-        routerLinkActive="navbar-item__underlined"
-      >
-        Contact Us
-      </a>
-      <a
-        class="mobile-item"
-        href="https://symaware.copernica.tue.nl/subscribe_symaware"
-        target="_blank"
-      >
-        Join our newsletter
-      </a>
-    </div>
-  </nav>
+<div class="container-mob-nav">
+    <nav role="navigation">
+        <div class="dropdown">
+            <a class="mobile-item" routerLink="/">
+                <img
+                    class="mobile_logo"
+                    src="../../assets/icons/logo-symaware.png"
+                    alt="SymAware Logo"
+                />
+            </a>
+            <div class="mobile-item">
+                <input type="checkbox" class="nav-toggle" id="nav-toggle" />
+                <label class="navicon" for="nav-toggle" (click)="toggle()">
+                    <span
+                        *ngFor="let i of [1, 2, 3]"
+                        class="navicon-bar"
+                    ></span>
+                </label>
+            </div>
+        </div>
+        <div class="toggle-bar" #dropdown>
+            <a
+                class="mobile-item"
+                routerLink="/"
+                routerLinkActive="navbar-item__underlined"
+            >
+                Home
+            </a>
+            <a
+                class="mobile-item"
+                routerLink="research-publications"
+                routerLinkActive="navbar-item__underlined"
+            >
+                Research & Publications
+            </a>
+            <a
+                class="mobile-item"
+                routerLink="team"
+                routerLinkActive="navbar-item__underlined"
+            >
+                Team
+            </a>
+            <a
+                class="mobile-item"
+                routerLink="consortium"
+                routerLinkActive="navbar-item__underlined"
+            >
+                Consortium
+            </a>
+            <a
+                class="mobile-item"
+                routerLink="contacts"
+                routerLinkActive="navbar-item__underlined"
+            >
+                Contact Us
+            </a>
+            <a
+                class="mobile-item"
+                href="https://symaware.copernica.tue.nl/subscribe_symaware"
+                target="_blank"
+            >
+                Join our newsletter
+            </a>
+        </div>
+    </nav>
 </div>

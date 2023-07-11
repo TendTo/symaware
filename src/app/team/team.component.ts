@@ -20,16 +20,37 @@ import {
   styleUrls: ["./team.component.scss"],
   animations: [
     trigger("inOutAnimation", [
-      transition(":enter", [
-        style({ transform: "translateX(-100%)", opacity: 0 }),
-        animate(
-          "0.5s ease-in",
-          style({ transform: "translateX(0)", opacity: 1 })
-        ),
-      ]),
+      // transition(":enter", [
+      //   style({
+      //     // transform: "translateX(-100%)",
+      //     opacity: 0,
+      //     filter: "blur(2px)",
+      //     height: "0",
+      //   }),
+      //   animate(
+      //     "0.5s ease-in-out",
+      //     style({
+      //       // transform: "translateX(0)",
+      //       opacity: 1,
+      //       filter: "blur(0px)",
+      //       height: "inherit",
+      //     })
+      //   ),
+      // ]),
       transition(":leave", [
-        style({ opacity: 1 }),
-        animate("0.1s ease-in", style({ opacity: 0 })),
+        style({
+          opacity: 1,
+          filter: "blur(0px)",
+          // transform: "translateX(0)",
+        }),
+        animate(
+          "0.25s ease-out",
+          style({
+            opacity: 0,
+            filter: "blur(2px)",
+            // transform: "translateX(100%)",
+          })
+        ),
       ]),
     ]),
   ],
@@ -40,4 +61,11 @@ export class TeamComponent {
   institutions = institutions;
   selected;
   all;
+
+  onMouseEnter(hoverName: HTMLElement) {
+    hoverName.classList.remove("hide");
+  }
+  onMouseLeave(hoverName: HTMLElement) {
+    hoverName.classList.add("hide");
+  }
 }
