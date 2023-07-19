@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="banner">
+        <div class="banner__half">
+            <h1 class="heading">BE PART OF THE TEAM</h1>
+            <p class="paragraph__white">
+                If you would like to work with us, browse the different openings
+                we have available.
+            </p>
+        </div>
+        <!--        <div class="banner__half">-->
+        <img
+            class="wrapper_image"
+            src="assets/images/symaware/symaware-art-transparent.svg"
+        />
+        <!--        </div>-->
+    </div>
+
+    <div class="search">
+        <p class="paragraph">All</p>
+        <mat-form-field>
+            <mat-label class="paragraph">Institutions</mat-label>
+            <mat-select [(value)]="selected">
+                <mat-option class="paragraph"> All </mat-option>
+                <mat-option
+                    class="paragraph"
+                    [value]="inst.displayName"
+                    *ngFor="let inst of institutions"
+                >
+                    {{ inst.displayName }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="wrapper_boxes">
+        <div class="box">
+            <p class="box__heading">Doctoral Trainee</p>
+
+            <p class="paragraph">
+                <img src="assets/icons/location.png" class="box__photo" />
+                Newcastle University, UK
+            </p>
+        </div>
+        <div class="box">
+            <p class="box__heading">Doctoral Trainee</p>
+
+            <p class="paragraph">
+                <img src="assets/icons/location.png" class="box__photo" />
+                Newcastle University, UK
+            </p>
+        </div>
+        <div class="box">
+            <p class="box__heading">Doctoral Trainee</p>
+
+            <p class="paragraph">
+                <img src="assets/icons/location.png" class="box__photo" />
+                Newcastle University, UK
+            </p>
+        </div>
+    </div>
+</div>

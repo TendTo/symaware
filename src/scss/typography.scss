@@ -1,63 +1,68 @@
-@import "../scss/variables";
+@import '../scss/variables';
 
 .heading_primary {
-  font-size: 2rem;
-  font-weight: 900;
-  color: #1d2e5d;
-  margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #1d2e5d;
+    margin: 1rem 0;
 
-  &__white {
-    @extend .heading_primary;
-    color: $color-white !important;
-  }
-  @media screen and (min-width: 1600px) {
-    font-size: 2.8rem;
-  }
+    &__white {
+        @extend .heading_primary;
+        color: $color-white !important;
+    }
+    @media screen and (min-width: 1600px) {
+        font-size: 2.8rem;
+    }
 }
 
 .heading_secondary {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1d2e5d;
-  margin: 1rem 0;
-  position: relative;
-  display: inline-block;
-  &__white {
-    @extend .heading_secondary;
-    color: $color-white !important;
-  }
-  @media screen and (min-width: 1600px) {
-    font-size: 2.1rem;
-  }
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1d2e5d;
+    margin: 1rem 0;
+    position: relative;
+    display: inline-block;
+    &__white {
+        @extend .heading_secondary;
+        color: $color-white !important;
+    }
+    @media screen and (min-width: 1600px) {
+        font-size: 2.1rem;
+    }
 }
 
 .paragraph {
-  font-size: 1rem;
-  font-weight: 400;
-  color: $color-font-blue;
-  @media screen and (min-width: 1600px) {
-    font-size: 1.5rem;
-  }
+    font-size: 1rem;
+    font-weight: 400;
+    color: $color-font-blue;
+    @media screen and (min-width: 1600px) {
+        font-size: 1.4rem;
+    }
+
+    &__white {
+        @extend .paragraph;
+        color: $color-white;
+    }
 }
 
 .paragraph__highlighted {
-  font-size: 1rem;
-  font-weight: 500;
-  margin: 0;
-  color: $color-black;
-  &__dark {
-    @extend .paragraph__highlighted;
-    color: $color-dark-blue;
-  }
-  &__light {
-    @extend .paragraph__highlighted;
-    color: $color-font-blue;
-  }
-  @media screen and (min-width: 1600px) {
-    font-size: 1.5rem;
-  }
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    color: $color-black;
+    &__dark {
+        @extend .paragraph__highlighted;
+        color: $color-dark-blue;
+    }
+    &__light {
+        @extend .paragraph__highlighted;
+        color: $color-font-blue;
+    }
+    @media screen and (min-width: 1600px) {
+        font-size: 1.5rem;
+    }
 }
 
 t-color-black {
-  color: $color-black !important;
+    color: $color-black !important;
 }

@@ -16,13 +16,13 @@
         </button>
         <button
             class="paragraph cat-button u-margin-right dynamic--underline"
-            (click)="selected = 'deliverables'"
+            (click)="selected = 'deliverables'; sort_selected = 'all'"
         >
             Deliverables
         </button>
         <button
             class="paragraph cat-button dynamic--underline"
-            (click)="selected = 'research'"
+            (click)="selected = 'research'; sort_selected = 'all'"
         >
             Research Papers
         </button>
@@ -98,8 +98,9 @@
             class="a-fade-in"
             *ngIf="selected == 'all' || selected == 'research'"
         >
-            <div class="publication" *ngFor="let publication of publications">
+            <div *ngFor="let publication of publications">
                 <div
+                    class="publication"
                     *ngIf="
                         publication.year == sort_selected ||
                         sort_selected == 'all'
@@ -133,16 +134,15 @@
         </div>
 
         <!--        <div *ngIf="deliverables.length == 0">-->
-        <!--            <div class="publication">-->
-        <!--                No Deliverables-->
-        <!--            </div>-->
+        <!--            <div class="publication">No Deliverables</div>-->
         <!--        </div>-->
         <div
             class="a-fade-in"
             *ngIf="selected == 'all' || selected == 'deliverables'"
         >
-            <div class="publication" *ngFor="let deliverable of deliverables">
+            <div *ngFor="let deliverable of deliverables">
                 <div
+                    class="publication"
                     *ngIf="
                         deliverable.work_package == sort_selected ||
                         sort_selected == 'all'
@@ -151,21 +151,21 @@
                     <div
                         class="publication__title paragraph__highlighted__light u-text-underline"
                     >
-                        <a href="{{ deliverable.link }}" target="_blank">
-                            {{ deliverable.title }}
-                        </a>
+                        <!--                        <a href="{{ deliverable.link }}" target="_blank">-->
+                        {{ deliverable.title }}
+                        <!--                        </a>-->
                     </div>
 
                     <div class="publication__authors paragraph">
                         Deliverable Number: {{ deliverable.number }}
                     </div>
-                    <a href="{{ deliverable.link }}" target="_blank">
-                        <button
-                            class="publication__button paragraph__highlighted"
-                        >
-                            See Publication
-                        </button>
-                    </a>
+                    <!--                    <a href="{{ deliverable.link }}" target="_blank">-->
+                    <!--                        <button-->
+                    <!--                            class="publication__button paragraph__highlighted"-->
+                    <!--                        >-->
+                    <!--                            See Publication-->
+                    <!--                        </button>-->
+                    <!--                    </a>-->
                 </div>
             </div>
         </div>

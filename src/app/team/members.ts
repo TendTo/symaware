@@ -14,6 +14,7 @@ export const members = [
         institution: 'nlr',
         role: 'phd',
         partner: 'industry',
+        link: '',
     },
     {
         name: 'Ana Tanevska',
@@ -22,6 +23,7 @@ export const members = [
         institution: 'uu',
         role: 'phd',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Didem Gürdür Broo',
@@ -30,6 +32,7 @@ export const members = [
         institution: 'uu',
         role: 'phd',
         partner: 'academic',
+        link: 'https://didemgurdur.com/',
     },
     {
         name: 'Katie Winkle',
@@ -38,6 +41,7 @@ export const members = [
         institution: 'uu',
         role: 'phd',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Lefteris Vlahakis',
@@ -46,6 +50,7 @@ export const members = [
         institution: 'kth',
         role: 'phd',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Siyuan Liu',
@@ -54,6 +59,7 @@ export const members = [
         institution: 'kth',
         role: 'phd',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Gregorio Marchesini',
@@ -62,6 +68,7 @@ export const members = [
         institution: 'kth',
         role: 'phd',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Birgit Van Huijgevoort',
@@ -70,6 +77,7 @@ export const members = [
         institution: 'tu/e',
         role: 'phd',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Zengjie Zhang',
@@ -78,6 +86,7 @@ export const members = [
         institution: 'tu/e',
         role: 'phd',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Ruohan Wang',
@@ -86,6 +95,7 @@ export const members = [
         institution: 'tu/e',
         role: 'phd',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Erjen Lefeber',
@@ -94,6 +104,7 @@ export const members = [
         institution: 'tu/e',
         role: 'phd',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Kevin Tom  Kurian',
@@ -102,6 +113,7 @@ export const members = [
         institution: 'tu/e',
         role: 'phd',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Igo Besselink',
@@ -110,6 +122,7 @@ export const members = [
         institution: 'tu/e',
         role: 'phd',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Arabinda Gnosh',
@@ -118,6 +131,7 @@ export const members = [
         institution: 'MPI-SWS',
         role: 'phd',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Arash Bahari Kordabad',
@@ -126,6 +140,7 @@ export const members = [
         institution: 'MPI-SWS',
         role: 'phd',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Edwin Van Hassel',
@@ -134,6 +149,7 @@ export const members = [
         institution: 'siemens',
         role: '',
         partner: 'industry',
+        link: '',
     },
     {
         name: 'Lars Lindemann',
@@ -142,6 +158,7 @@ export const members = [
         institution: 'kth',
         role: '',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Eric Hu',
@@ -150,6 +167,7 @@ export const members = [
         institution: 'siemens',
         role: '',
         partner: 'industry',
+        link: '',
     },
     {
         name: 'Maryam Sharifi',
@@ -158,6 +176,7 @@ export const members = [
         institution: 'kth',
         role: '',
         partner: 'academic',
+        link: '',
     },
     {
         name: 'Raymond Van Markwijk',
@@ -166,6 +185,7 @@ export const members = [
         institution: 'siemens',
         role: '',
         partner: 'industry',
+        link: '',
     },
 ]
 
@@ -183,51 +203,59 @@ export const leaders = [
         institution: 'MPI-SWS',
         role: 'Project Coordinator & Principal Investigator',
         partner: 'academic',
+        lab_link: 'https://hycodev.com',
     },
     {
-        id: 2,
+        id: 6,
         name: 'Dr. Mohsen Allrezael',
         image: '../../assets/images/people/mohsen-allrezael.png',
         companyLogo: '../../assets/images/consortium/siemens.png',
         institution: 'siemens',
         role: 'Principal Investigator',
         partner: 'industry',
+        lab_link:
+            'https://plm.sw.siemens.com/en-US/simcenter/autonomous-vehicle-solutions',
     },
     {
-        id: 3,
+        id: 4,
         name: 'Prof. Ginevra Castellano',
         image: '../../assets/images/people/ginevra-castellano.png',
         companyLogo: '../../assets/images/consortium/uu.png',
         institution: 'uu',
         role: 'Principal Investigator',
         partner: 'academic',
+        lab_link: 'https://usr-lab.github.io',
     },
     {
-        id: 4,
+        id: 3,
         name: 'Prof. Dimos Dimorogonas',
         image: '../../assets/images/people/dimos-dimorogonas.png',
         companyLogo: '../../assets/images/consortium/kth.png',
         institution: 'kth',
         role: 'Principal Investigator',
         partner: 'academic',
+        lab_link: 'https://people.kth.se/~dimos/',
     },
     {
-        id: 5,
+        id: 2,
         name: 'Dr. Sofie Haesaert',
         image: '../../assets/images/people/sofie-haesaert.png',
         companyLogo: '../../assets/images/consortium/tue.png',
         institution: 'tu/e',
         role: 'Principal Investigator',
         partner: 'academic',
+        lab_link:
+            'https://www.tue.nl/en/research/research-groups/control-systems',
     },
     {
-        id: 6,
+        id: 5,
         name: 'Dr. Sybert Stroeve',
         image: '../../assets/images/people/sybert-stroeve.png',
         companyLogo: '../../assets/images/consortium/nlr.png',
         institution: 'nlr',
         role: 'Principal Investigator',
         partner: 'industry',
+        lab_link: 'https://www.nlr.org/',
     },
 ]
 

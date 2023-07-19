@@ -54,17 +54,19 @@
                         alt="{{ leader.name }}"
                     />
                 </div>
-                <div class="wrapper_names">
-                    <p class="leader__name">{{ leader.name }}</p>
-                    <p class="leader__role">{{ leader.role }}</p>
-                </div>
-                <div class="container__company">
-                    <img
-                        class="company"
-                        src="{{ leader.companyLogo }}"
-                        alt="{{ leader.institution }}"
-                    />
-                </div>
+                <a href="{{ leader.lab_link }}" target="_blank">
+                    <div class="wrapper_names">
+                        <p class="leader__name">{{ leader.name }}</p>
+                        <p class="leader__role">{{ leader.role }}</p>
+                    </div>
+                    <div class="container__company">
+                        <img
+                            class="company"
+                            src="{{ leader.companyLogo }}"
+                            alt="{{ leader.institution }}"
+                        />
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -110,8 +112,11 @@
                 />
             </div>
             <div class="wrapper_names">
-                <p class="leader__name">{{ member.name }}</p>
-                <p class="leader__role">{{ member.description }}</p>
+                <a href="{{ member.link }}">
+                    <p class="leader__name">{{ member.name }}</p>
+                    <p class="leader__role">{{ member.description }}</p>
+                </a>
+
                 <div></div>
             </div>
             <div style="margin-bottom: 4rem"></div>

@@ -23,6 +23,9 @@
     @media screen and (max-width: 1080px) {
         justify-content: center;
     }
+    @media screen and (min-width: 1600px) {
+        justify-content: space-evenly;
+    }
 }
 .consortium_box {
     display: flex;

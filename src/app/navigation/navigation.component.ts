@@ -22,10 +22,9 @@ export class NavigationComponent {
     nav
     visible = false
     ngOnInit(): void {
-        this.nav = document.querySelector('.container-nav')
+        this.nav = document.querySelector('.navbar')
         console.log(this.nav)
         this.sticky = this.nav.offsetY
-        window.addEventListener('scroll', this.makeSticky)
     }
 
     toggle() {
@@ -35,17 +34,5 @@ export class NavigationComponent {
         } else {
             this.menuToggle.nativeElement.classList.remove('toggle-bar')
         }
-    }
-    makeSticky() {
-        console.log('MOTHERRR')
-        console.log('PageYOffset ' + window.pageYOffset)
-        console.log('Sticky ' + window.pageYOffset)
-        if (window.pageYOffset >= this.sticky) {
-            console.log('MOTHERRR pt. 2')
-            this.nav.classList.add('sticky')
-        }
-        // else {
-        //     this.nav.classList.remove('sticky')
-        // }
     }
 }
