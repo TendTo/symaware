@@ -59,7 +59,7 @@
         width: 24rem;
         @media screen and (max-width: 900px) {
             width: 95%;
-            color: $color-white;
+            color: $color-white !important;
         }
     }
 
@@ -308,16 +308,23 @@ $degrees: 5deg;
 }
 
 .barrier {
-    min-height: 4rem;
+    min-height: 2rem;
     background: $color-sand;
 }
-.vector {
+.gradient_mobile {
     display: none;
     @media screen and (max-width: 900px) {
-        display: flex;
+        display: block;
         position: absolute;
-        z-index: -1;
         width: 100%;
+        z-index: -1;
+        min-height: 52rem;
+        background: linear-gradient(
+            #23356c 0%,
+            #23356d 20%,
+            #203d73 40%,
+            #161f48 60%
+        );
     }
 }
 .wrapper_description {
@@ -327,13 +334,22 @@ $degrees: 5deg;
     align-items: center;
     min-height: 18rem;
     background: linear-gradient(30deg, #012869, #012869 85%, #031c45);
+    @media screen and (max-width: 900px) {
+        justify-content: center;
+        flex-flow: column;
+        min-height: 10rem;
+        padding: 2rem 2rem;
+    }
 }
 
 .description {
     width: 50%;
     color: white;
     padding: 0 1rem;
-
+    @media screen and (max-width: 900px) {
+        width: 100%;
+        padding: 1rem 1rem;
+    }
     &__heading {
         font-size: 2.25rem;
         display: inline-block;
@@ -354,12 +370,19 @@ $degrees: 5deg;
     align-items: flex-start;
     justify-content: flex-start;
     min-height: 18rem;
+    @media screen and (max-width: 900px) {
+        padding: 2rem 2rem;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
 }
 
 .objective {
     margin-left: 4rem;
-    padding: 1rem 0;
-
+    padding: 2rem 0;
+    @media screen and (max-width: 900px) {
+        margin-left: 0rem;
+    }
     &__heading {
         padding: 1rem;
         min-height: 1rem;
@@ -383,4 +406,7 @@ $degrees: 5deg;
         border: 3px solid $color-font-blue;
         background-color: transparent;
     }
+}
+.page {
+    overflow: clip;
 }

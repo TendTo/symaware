@@ -20,7 +20,7 @@ export class HomeComponent {
     // @ViewChild("memberSlider") sliderRef: ElementRef<HTMLElement>
     //
     // slider: KeenSliderInstance = null
-
+    mobile = false
     ngAfterViewInit() {
         // this.slider = new KeenSlider(this.sliderRef.nativeElement, {
         //   loop: true,
@@ -48,7 +48,6 @@ export class HomeComponent {
             window.scrollTo(0, 0)
         })
     }
-
     // ngOnDestroy() {
     //   if (this.slider) this.slider.destroy()
     // }
@@ -61,6 +60,14 @@ export class HomeComponent {
         })
     }
     ngOnInit() {
+        //checks screen size to apply dynamic styling
+        if (screen.width <= 900) {
+            this.mobile = true
+        } else {
+            this.mobile = false
+        }
+
+        //Checks whether HTML elements are observed by user, if true, it adds slide-in animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 console.log(entry)

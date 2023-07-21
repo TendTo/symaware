@@ -1,12 +1,6 @@
 <div class="container_home">
     <section class="page" id="landing">
-        <div class="wrapper_vector">
-            <img
-                class="vector"
-                src="../../assets/images/symaware/Vector.png"
-                alt="SymAware gradient background"
-            />
-        </div>
+        <div class="gradient_mobile"></div>
         <div class="landing-section">
             <div class="home_heading">
                 <h1 class="home_heading__first a-moveIn-left">SUSTAINABLE</h1>
@@ -15,7 +9,14 @@
                 </h1>
             </div>
             <div class="intro-paragraph">
-                <p class="a-moveIn-left paragraph">
+                <p
+                    class="a-moveIn-left paragraph"
+                    [ngClass]="
+                        mobile
+                            ? 'a-moveIn-left paragraph__white'
+                            : 'a-moveIn-left paragraph'
+                    "
+                >
                     Picture an environment where autonomous agents (robots,
                     drones, cars, etc.) collaborate with humans to fulfil
                     complex and dynamically changing tasks. To have real,
@@ -37,7 +38,14 @@
                         alt="SymAware Illustration"
                     />
                 </div>
-                <p class="a-moveIn-left paragraph">
+                <p
+                    class="a-moveIn-left paragraph"
+                    [ngClass]="
+                        mobile
+                            ? 'a-moveIn-left paragraph__white'
+                            : 'a-moveIn-left paragraph'
+                    "
+                >
                     This is the purpose of
                     <b>
                         Symbolic Logic Framework for Situational Awareness in
@@ -48,8 +56,8 @@
             </div>
         </div>
     </section>
-    <!--    <div class="barrier"></div>-->
-    <section class="page u-hidden">
+    <div class="barrier"></div>
+    <section class="page u-hidden" id="info">
         <div class="wrapper_description">
             <div class="description">
                 <p class="description__heading">NEW CONCEPTUAL</p>
@@ -80,7 +88,7 @@
             </div>
         </div>
     </section>
-    <section class="page u-hidden">
+    <section class="page u-hidden" id="objectives">
         <div class="wrapper_objectives">
             <h3 class="objective__heading">
                 These objectives will be achieved in SymAware through:
@@ -187,6 +195,8 @@
 
 <ul id="pagination" class="a-fade-in">
     <li><a (click)="scrollTo('landing')"></a></li>
+    <li><a (click)="scrollTo('info')"></a></li>
+    <li><a (click)="scrollTo('objectives')"></a></li>
     <li><a (click)="scrollTo('consortium')"></a></li>
     <li><a (click)="scrollTo('news')"></a></li>
 </ul>

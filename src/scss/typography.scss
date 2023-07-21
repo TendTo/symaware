@@ -43,6 +43,10 @@
         @extend .paragraph;
         color: $color-white;
     }
+    &__dark {
+        @extend .paragraph__highlighted;
+        color: $color-dark-blue;
+    }
 }
 
 .paragraph__highlighted {

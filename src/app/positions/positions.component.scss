@@ -4,6 +4,7 @@
     margin: 0;
     width: 100%;
     /*padding: 2rem;*/
+
     .banner {
         padding: 3rem 4rem 1rem 4rem;
         background: linear-gradient(#012869, #031c45);
@@ -15,6 +16,14 @@
         max-height: 12rem;
         &__half {
             width: 50%;
+            @media screen and (max-width: 900px) {
+                width: 80%;
+            }
+        }
+        @media screen and (max-width: 900px) {
+            flex-flow: column;
+            padding: 1rem;
+            width: auto;
         }
     }
 
@@ -24,6 +33,9 @@
         font-weight: 800;
         color: $color-sand;
         filter: drop-shadow(3px 3px 0px #bd6f13);
+        @media screen and (max-width: 900px) {
+            font-size: 2.5rem;
+        }
     }
     .image {
         width: 4rem;
@@ -32,6 +44,9 @@
     }
     .wrapper_image {
         margin-right: 6rem;
+        @media screen and (max-width: 900px) {
+            display: none;
+        }
     }
 }
 
@@ -39,7 +54,12 @@
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    padding: 2rem 4rem 4rem 4rem;
+    padding: 2rem 4rem 8rem 4rem;
+    @media screen and (max-width: 900px) {
+        align-items: center;
+        flex-flow: column;
+        gap: 4rem;
+    }
 
     .box {
         display: flex;
@@ -54,6 +74,11 @@
         @media screen and (min-width: 1600px) {
             height: 5rem;
             width: 18rem;
+            padding: 2rem;
+        }
+        @media screen and (max-width: 900px) {
+            height: 5rem;
+            width: 12rem;
             padding: 2rem;
         }
         &__heading {
