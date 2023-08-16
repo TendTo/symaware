@@ -1,15 +1,148 @@
-.wrapper_news {
-  margin: 0;
-  //position: relative;
-  background-image: url("../../assets/images/symaware/vector-symaware_hero.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+@import '../../scss/variables';
+@import '../../scss/mixins';
+//.wrapper_box {
+//    display: flex;
+//    justify-content: space-around;
+//    flex-wrap: wrap;
+//    flex-flow: column;
+//    padding: 10rem 1rem;
+//}
+
+.boxes {
+    margin: 4rem;
+    max-height: 30rem;
+    max-width: 72rem;
+    @include respond(phone) {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-flow: column;
+        width: 32rem;
+        margin: 1rem;
+        justify-self: center;
+    }
+    @media screen and (min-width: 1600px) {
+        max-width: 110rem;
+    }
+    .box_news {
+        max-width: 18rem;
+        min-width: 18rem;
+        border: none;
+        margin: 0;
+        transition-duration: 0.25s;
+        align-self: center;
+        justify-self: center;
+        display: inline-block;
+
+        &:hover {
+            transform: scale(1.05);
+            transition-duration: 0.25s;
+        }
+        @media screen and (min-width: 1600px) {
+            min-width: 18.75rem;
+            max-width: 18.75rem;
+        }
+
+        .wrapper_image {
+            position: relative;
+            height: 4rem;
+            width: 8rem;
+        }
+
+        .image_news {
+            position: absolute;
+            border-radius: 1.5rem;
+            min-width: 18rem;
+            max-width: 18rem;
+            z-index: -1;
+            @media screen and (min-width: 1600px) {
+                min-width: 21.5rem;
+                max-width: 21.5rem;
+            }
+        }
+
+        .wrapper_text {
+            min-width: 15rem;
+            max-width: 15rem;
+            min-height: 12rem;
+            margin-top: 6rem;
+            padding: 0.5rem 1.5rem 2rem 1.5rem;
+            max-height: 12rem;
+            background: #f2f2f2;
+            border-radius: 1.5rem;
+            filter: drop-shadow(0px 8px 6px rgba(0, 0, 0, 0.25));
+            @media screen and (min-width: 1600px) {
+                min-height: 15rem;
+                min-width: 18.75rem;
+                max-width: 18.75rem;
+            }
+        }
+    }
 }
 
-.wrapper_box {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 10rem 1rem;
+.dots {
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+.dot {
+    border: none;
+    width: 0.25rem;
+    height: 0.25rem;
+    background: #c5c5c5;
+    border-radius: 50%;
+    margin: 0 0.25rem;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+.dot:focus {
+    outline: none;
+}
+
+.dot.active {
+    background: #000;
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: $color-dark-blue;
+    cursor: pointer;
+}
+
+.arrow--left {
+    left: -3rem;
+    right: auto;
+    @media screen and (max-width: 600px) {
+        left: -2rem;
+    }
+}
+
+.arrow--right {
+    left: auto;
+    right: -3rem;
+    @media screen and (max-width: 600px) {
+        right: -2rem;
+    }
+}
+
+.arrow--disabled {
+    fill: rgba(255, 255, 255, 0.5);
+}
+.navigation-wrapper {
+    position: relative;
+}
+
+.slide-size {
+    max-width: 20rem !important;
+    min-width: 20rem !important;
+    @include respond(big-desktop) {
+        max-width: 25rem !important;
+        min-width: 25rem !important;
+    }
 }

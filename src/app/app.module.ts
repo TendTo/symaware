@@ -19,7 +19,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FooterComponent } from './footer/footer.component'
 import { NewsComponent } from './news/news.component'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { PositionsComponent } from './positions/positions.component'
+import { PositionsComponent } from './positions/positions.component';
+import { DemonstrationsComponent } from './demonstrations/demonstrations.component'
 
 @NgModule({
     declarations: [
@@ -35,6 +36,7 @@ import { PositionsComponent } from './positions/positions.component'
         NewsComponent,
         FilterPipe,
         PositionsComponent,
+        DemonstrationsComponent,
     ],
     imports: [
         BrowserModule,

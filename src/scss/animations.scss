@@ -1,80 +1,98 @@
-@import "variables";
+@import 'variables';
 
 @keyframes moveInRight {
-  0% {
-    opacity: 0;
-    filter: blur(2px);
-    transform: translateX(15rem);
-  }
+    0% {
+        opacity: 0;
+        filter: blur(2px);
+        transform: translateX(15rem);
+    }
 
-  100% {
-    opacity: 1;
-    filter: blur(0);
-    transform: translate(0);
-  }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translate(0);
+    }
 }
 @keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    filter: blur(4px);
-    visibility: hidden;
-    transform: translateX(-15rem);
-  }
+    0% {
+        opacity: 0;
+        filter: blur(4px);
+        visibility: hidden;
+        transform: translateX(-15rem);
+    }
 
-  100% {
-    opacity: 1;
-    visibility: visible;
-    filter: blur(0);
-    transform: translate(0);
-  }
+    100% {
+        opacity: 1;
+        visibility: visible;
+        filter: blur(0);
+        transform: translate(0);
+    }
 }
 @keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    filter: blur(2px);
-    transform: translateY(50%);
-  }
+    0% {
+        opacity: 0;
+        filter: blur(2px);
+        transform: translateY(50%);
+    }
 
-  100% {
-    opacity: 1;
-    filter: blur(0);
-    transform: translate(0);
-  }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translate(0);
+    }
 }
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-    filter: blur(2px);
-  }
-  33% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    filter: blur(0);
-  }
+    0% {
+        opacity: 0;
+        filter: blur(2px);
+    }
+    33% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes dropShadow {
+    0% {
+        box-shadow: 0rem 0rem $color-white, -2rem 0rem $color-sand;
+    }
+
+    70% {
+        box-shadow: 2rem 0rem $color-white, 1.5rem 1.5rem $color-sand;
+    }
+
+    100% {
+        box-shadow: 2rem 1rem $color-white, 1.5rem 1.5rem $color-sand;
+    }
+}
+
+.dropShadow {
+    animation: 1s 1 dropShadow;
 }
 
 .a-moveIn-right {
-  animation: moveInRight 0.5s ease-in-out;
-  &__delayed {
-    @extend .a-moveIn-right;
-    transition-delay: 625ms;
-  }
+    animation: moveInRight 0.5s ease-in-out;
+    &__delayed {
+        @extend .a-moveIn-right;
+        transition-delay: 625ms;
+    }
 }
 .a-moveIn-left {
-  animation: moveInLeft 0.5s ease-in-out;
-  animation-fill-mode: forwards;
+    animation: moveInLeft 0.5s ease-in-out;
+    animation-fill-mode: forwards;
 
-  &__delayed {
-    @extend .a-moveIn-left;
-    transition-delay: 625ms;
-  }
+    &__delayed {
+        @extend .a-moveIn-left;
+        transition-delay: 625ms;
+    }
 }
 
 .a-fade-in {
-  animation: fadeIn 0.5s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+    animation: fadeIn 0.5s cubic-bezier(0.57, 0.21, 0.69, 1.25);
 }
 .a-moveIn-bottom {
-  animation: moveInBottom 0.5s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+    animation: moveInBottom 0.5s cubic-bezier(0.57, 0.21, 0.69, 1.25);
 }

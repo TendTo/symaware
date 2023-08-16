@@ -1,11 +1,5 @@
-import { Component, ElementRef, ViewChild, Inject } from '@angular/core'
-import KeenSlider, { KeenSliderInstance } from 'keen-slider'
+import { Component } from '@angular/core'
 import { Router, NavigationEnd } from '@angular/router'
-
-//
-
-const animation = { duration: 5000, easing: (t) => t }
-// const hiddenElements = document.querySelectorAll('.u-hidden');
 
 @Component({
     selector: 'app-home',
@@ -17,30 +11,9 @@ const animation = { duration: 5000, easing: (t) => t }
 })
 export class HomeComponent {
     constructor(private router: Router) {}
-    // @ViewChild("memberSlider") sliderRef: ElementRef<HTMLElement>
-    //
-    // slider: KeenSliderInstance = null
+
     mobile = false
     ngAfterViewInit() {
-        // this.slider = new KeenSlider(this.sliderRef.nativeElement, {
-        //   loop: true,
-        //   renderMode: "performance",
-        //   drag: false,
-        //   slides: {
-        //     perView: 5,
-        //     origin: "center",
-        //   },
-        //   created(s) {
-        //     s.moveToIdx(1, true, animation)
-        //   },
-        //   updated(s) {
-        //     s.moveToIdx(s.track.details.abs + 1, true, animation)
-        //   },
-        //   animationEnded(s) {
-        //     s.moveToIdx(s.track.details.abs + 1, true, animation)
-        //   },
-        // })
-
         this.router.events.subscribe((evt) => {
             if (!(evt instanceof NavigationEnd)) {
                 return
@@ -48,9 +21,6 @@ export class HomeComponent {
             window.scrollTo(0, 0)
         })
     }
-    // ngOnDestroy() {
-    //   if (this.slider) this.slider.destroy()
-    // }
 
     scrollTo(element: any): void {
         ;(document.getElementById(element) as HTMLElement).scrollIntoView({
@@ -61,7 +31,7 @@ export class HomeComponent {
     }
     ngOnInit() {
         //checks screen size to apply dynamic styling
-        if (screen.width <= 900) {
+        if (screen.width <= 600) {
             this.mobile = true
         } else {
             this.mobile = false

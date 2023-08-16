@@ -3,17 +3,17 @@
 .container-nav {
     display: none;
     position: fixed;
-    z-index: 99;
+    min-height: 2rem;
     width: 100%;
-
-    background: rgba(245, 245, 245, 0.95);
+    z-index: 99;
+    background: rgb($color-white, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.25);
-    min-height: 2rem;
+
     @media screen and (min-width: 1600px) {
         min-height: 6rem;
     }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 1000px) {
         display: block;
     }
 
@@ -24,44 +24,34 @@
         .navbar-link {
             display: flex;
             justify-content: flex-end;
-            align-items: center;
         }
         .navbar-item {
-            font-size: 1rem;
             padding: 0 1rem;
             height: 100%;
             display: flex;
-            align-content: center;
-            align-self: center;
             align-items: center;
-            text-decoration: none;
-            color: $color-font-blue;
-            font-weight: 400;
-            transition: 0.3s ease-out;
-            position: relative;
-            @media screen and (min-width: 1600px) {
-                font-size: 1.25rem;
-            }
             &__underlined {
                 text-decoration: underline !important;
-                color: $color-black;
-                text-decoration-color: $color-black !important;
-                transition: 0.3s;
+                color: $color-dark-blue;
+                text-decoration-color: $color-dark-blue !important;
             }
             &:hover:not(.navbar-brand) {
                 background-color: rgb($color-dark-blue, 0.95);
                 text-decoration-color: $color-sand !important;
-                color: white;
+                color: $color-white;
                 transition: 0.1s ease-out;
             }
         }
 
         .navbar-brand {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: flex-end;
             padding: 1rem;
-            margin-left: 2rem;
+            margin-left: 1rem;
             @media screen and (min-width: 1600px) {
-                padding: 2rem;
-                margin-left: 3rem;
+                padding: 1.25rem;
+                margin-left: 1.25rem;
             }
         }
 
@@ -80,13 +70,14 @@
 
 .container-mob-nav {
     width: 100%;
-    background: #f5f5f5;
+    background: $color-white;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
     min-height: 4rem;
+    padding-left: 1rem;
     z-index: 99;
     position: fixed;
     display: none;
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1000px) {
         display: block;
     }
 
@@ -97,49 +88,62 @@
         text-decoration: none;
         height: 2rem;
         padding: 1rem;
-        font-size: 1.1rem;
-    }
 
-    .close {
-        height: 100%;
-        width: 4rem;
+        &:last-child {
+            padding-bottom: 2rem;
+        }
     }
 
     .mobile-brand {
         display: flex;
-        padding: 1rem;
-        justify-content: flex-end;
         height: 2rem;
+        min-width: 2rem;
+        align-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .mobile-logo {
+        width: 8rem;
+        height: auto;
+    }
+
+    .dropdown {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 2rem 0 0;
+        height: 6rem;
     }
 }
 
 .navicon {
-    width: 30px;
-    height: 30px;
-    padding: 0;
+    width: 2.5rem;
+    height: 2.5rem;
     position: absolute;
     cursor: pointer;
     box-sizing: border-box;
-}
 
-.navicon-bar {
-    display: block;
-    width: 20px;
-    height: 2px;
-    position: absolute;
-    transition: all 0.2s ease-out;
-    background-color: #bdbdbd;
-    &:first-child {
-        top: 5px;
-    }
+    &-bar {
+        display: block;
+        width: 2.5rem;
+        height: 0.25rem;
+        position: absolute;
+        transition: all 0.2s ease-out;
+        background-color: #bdbdbd;
+        &:first-child {
+            top: 0.25rem;
+        }
 
-    &:nth-child(2) {
-        top: 50%;
-        transform: translateY(-50%);
-    }
+        &:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
 
-    &last-child {
-        bottom: 5px;
+        &:last-child {
+            bottom: 0.25rem;
+        }
     }
 }
 
@@ -147,34 +151,17 @@
     display: none;
     &:checked ~ .navicon > .navicon-bar:last-child {
         transform: rotate(-45deg);
-        bottom: 13px;
+        bottom: 1rem;
     }
     &:checked ~ .navicon > .navicon-bar:nth-child(2) {
         background-color: transparent !important;
     }
     &:checked ~ .navicon > .navicon-bar:first-child {
         transform: rotate(45deg);
-        top: 14px;
+        top: 1rem;
     }
 }
 
-.toggle-bar {
+.disable {
     display: none;
-}
-
-.mobile_logo {
-    width: 6rem;
-    height: auto;
-}
-
-.dropdown {
-    margin: 0 2rem 0 1rem;
-    display: flex;
-    justify-content: space-between;
-}
-.sticky {
-    position: fixed !important;
-    z-index: 99;
-    top: 0;
-    width: 100%;
 }

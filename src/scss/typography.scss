@@ -5,13 +5,12 @@
     font-weight: 900;
     color: #1d2e5d;
     margin: 1rem 0;
-
+    @media screen and (min-width: 1600px) {
+        font-size: 2.5rem;
+    }
     &__white {
         @extend .heading_primary;
         color: $color-white !important;
-    }
-    @media screen and (min-width: 1600px) {
-        font-size: 2.8rem;
     }
 }
 
@@ -30,13 +29,28 @@
         font-size: 2.1rem;
     }
 }
-
+.heading_tertiary {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1d2e5d;
+    margin: 1rem 0;
+    position: relative;
+    display: inline-block;
+    &__white {
+        @extend .heading_secondary;
+        color: $color-white !important;
+    }
+    @media screen and (min-width: 1600px) {
+        font-size: 1.5rem;
+    }
+}
 .paragraph {
     font-size: 1rem;
     font-weight: 400;
     color: $color-font-blue;
+    //margin-bottom: 1rem;
     @media screen and (min-width: 1600px) {
-        font-size: 1.4rem;
+        font-size: 1.25rem;
     }
 
     &__white {
@@ -44,26 +58,22 @@
         color: $color-white;
     }
     &__dark {
-        @extend .paragraph__highlighted;
+        @extend .paragraph;
         color: $color-dark-blue;
     }
-}
-
-.paragraph__highlighted {
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 0;
-    color: $color-black;
-    &__dark {
-        @extend .paragraph__highlighted;
-        color: $color-dark-blue;
-    }
-    &__light {
-        @extend .paragraph__highlighted;
+    &__highlighted {
+        @extend .paragraph;
+        font-weight: 500;
+        margin: 0;
         color: $color-font-blue;
-    }
-    @media screen and (min-width: 1600px) {
-        font-size: 1.5rem;
+        &__dark {
+            @extend .paragraph__highlighted;
+            color: $color-dark-blue;
+        }
+        &__light {
+            @extend .paragraph__highlighted;
+            color: $color-font-blue;
+        }
     }
 }
 

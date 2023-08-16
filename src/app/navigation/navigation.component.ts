@@ -30,9 +30,9 @@ export class NavigationComponent {
     toggle() {
         this.visible = !this.visible
         if (!this.visible) {
-            this.menuToggle.nativeElement.classList.add('toggle-bar')
+            this.menuToggle.nativeElement.classList.add('disable')
         } else {
-            this.menuToggle.nativeElement.classList.remove('toggle-bar')
+            this.menuToggle.nativeElement.classList.remove('disable')
         }
     }
 }

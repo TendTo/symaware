@@ -10,7 +10,7 @@
             </div>
             <div class="intro-paragraph">
                 <p
-                    class="a-moveIn-left paragraph"
+                    class="a-moveIn-left paragraph u-margin-bottom"
                     [ngClass]="
                         mobile
                             ? 'a-moveIn-left paragraph__white'
@@ -31,7 +31,7 @@
                         alt="SymAware Illustration"
                     />
                 </div>
-                <div class="hero a-moveIn-right">
+                <div class="a-moveIn-right">
                     <img
                         class="hero__mobile"
                         src="../../assets/images/symaware/symaware-art-transparent.svg"
@@ -39,7 +39,7 @@
                     />
                 </div>
                 <p
-                    class="a-moveIn-left paragraph"
+                    class="a-moveIn-left paragraph u-margin-bottom"
                     [ngClass]="
                         mobile
                             ? 'a-moveIn-left paragraph__white'
@@ -53,6 +53,10 @@
                     </b>
                     a project funded by the European Union.
                 </p>
+                <img
+                    class="funding__eu a-moveIn-left"
+                    src="assets/images/consortium/eu-flag-funded.png"
+                />
             </div>
         </div>
     </section>
@@ -69,7 +73,7 @@
                 <p class="description__heading_yellow">MULTI-AGENT SYSTEMS</p>
             </div>
             <div class="description">
-                <p class="paragraph__white">
+                <p class="paragraph__white u-margin-bottom">
                     SymAware addresses the fundamental need for a new conceptual
                     framework for awareness in multi-agent systems (MASs) that
                     is compatible with the internal models and specifications of
@@ -95,25 +99,25 @@
                 <div class="objective__shadow"></div>
             </h3>
             <div class="objective">
-                <p class="paragraph">
+                <p class="paragraph u-margin-bottom">
                     <span class="paragraph__highlighted__dark"><b>(a)</b></span>
                     Logical characterisation of awareness using symbolic
                     methods,
                 </p>
-                <p class="paragraph">
+                <p class="paragraph u-margin-bottom">
                     <span class="paragraph__highlighted__dark"><b>(b)</b></span>
                     Quantifying the symbolic reasoning for awareness with
                     spatial and temporal ingredients for decision making,
                 </p>
-                <p class="paragraph">
+                <p class="paragraph u-margin-bottom">
                     <span class="paragraph__highlighted__dark"><b>(c)</b></span>
                     Risk awareness via quantified knowledge,
                 </p>
-                <p class="paragraph">
+                <p class="paragraph u-margin-bottom">
                     <span class="paragraph__highlighted__dark"><b>(d)</b></span>
                     Quantifying and communicating knowledge awareness,
                 </p>
-                <p class="paragraph">
+                <p class="paragraph u-margin-bottom">
                     <span class="paragraph__highlighted__dark"><b>(e)</b></span>
                     Demonstrating awareness engineering in aviation and
                     automotive use cases, and
@@ -142,53 +146,11 @@
         <app-consortium></app-consortium>
     </section>
     <div class="barrier"></div>
-    <!--    <div class="mini_consortium">-->
-    <!--      <div class="heading_primary u-text-underline__sand ">-->
-    <!--        Project Consortium-->
-    <!--      </div>-->
-    <!--      <div class="keen-slider u-margin-top" #memberSlider>-->
-    <!--        <div class="keen-slider__slide u-justify-center">-->
-    <!--          <img class="mini_consortium__members" src="assets/images/consortium/KTH%201.png">-->
-    <!--        </div>-->
-    <!--        <div class="keen-slider__slide u-justify-center">-->
-    <!--          <img class="mini_consortium__members" src="assets/images/consortium/Mask%20group.png">-->
-    <!--        </div>-->
-    <!--        <div class="keen-slider__slide u-justify-center">-->
-    <!--          <img class="mini_consortium__members" src="assets/images/consortium/MPISS%201.png">-->
-    <!--        </div>-->
-    <!--        <div class="keen-slider__slide u-justify-center">-->
-    <!--          <img class="mini_consortium__members" src="assets/images/consortium/NLR%201.png">-->
-    <!--        </div>-->
-    <!--        <div class="keen-slider__slide u-justify-center">-->
-    <!--          <img class="mini_consortium__members" src="assets/images/consortium/Siemens%201.png">-->
-    <!--        </div>-->
-    <!--        <div class="keen-slider__slide u-justify-center">-->
-    <!--          <img class="mini_consortium__members" src="assets/images/consortium/tue%201.png">-->
-    <!--        </div>-->
-    <!--        <div class="keen-slider__slide u-justify-center">-->
-    <!--          <img class="mini_consortium__members" src="assets/images/consortium/UU%201.png">-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </div>-->
 
     <section class="page u-hidden" id="news">
         <div class="wrapper_news">
             <h1 class="heading_primary u-text-underline__sand">Recent News</h1>
-            <div class="wrapper_news__box">
-                <a
-                    class="twitter-timeline"
-                    href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw"
-                    data-width="1000"
-                    data-height="700"
-                    data-tweet-limit="6"
-                    data-show-replies="false"
-                    data-aria-polite="assert"
-                    data-chrome="noheader"
-                    data-widget_type="grid"
-                >
-                    Tweets from SymAware
-                </a>
-            </div>
+            <app-news></app-news>
         </div>
     </section>
 </div>

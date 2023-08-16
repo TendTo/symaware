@@ -206,17 +206,6 @@ export const leaders = [
         lab_link: 'https://hycodev.com',
     },
     {
-        id: 6,
-        name: 'Dr. Mohsen Allrezael',
-        image: '../../assets/images/people/mohsen-allrezael.png',
-        companyLogo: '../../assets/images/consortium/siemens.png',
-        institution: 'siemens',
-        role: 'Principal Investigator',
-        partner: 'industry',
-        lab_link:
-            'https://plm.sw.siemens.com/en-US/simcenter/autonomous-vehicle-solutions',
-    },
-    {
         id: 4,
         name: 'Prof. Ginevra Castellano',
         image: '../../assets/images/people/ginevra-castellano.png',
@@ -248,6 +237,17 @@ export const leaders = [
             'https://www.tue.nl/en/research/research-groups/control-systems',
     },
     {
+        id: 6,
+        name: 'Dr. Mohsen Allrezael',
+        image: '../../assets/images/people/mohsen-allrezael.png',
+        companyLogo: '../../assets/images/consortium/siemens.png',
+        institution: 'siemens',
+        role: 'Principal Investigator',
+        partner: 'industry',
+        lab_link:
+            'https://plm.sw.siemens.com/en-US/simcenter/autonomous-vehicle-solutions',
+    },
+    {
         id: 5,
         name: 'Dr. Sybert Stroeve',
         image: '../../assets/images/people/sybert-stroeve.png',
@@ -266,28 +266,29 @@ export const institutions = [
         displayName: 'MPI-SWS',
     },
     {
-        id: 2,
-        name: 'TU/e Eindhoven University of Technology',
-        displayName: 'TU/e',
-    },
-    {
         id: 3,
         name: 'KTH Royal Institute of Technology',
         displayName: 'KTH',
     },
+    {
+        id: 2,
+        name: 'TU/e Eindhoven University of Technology',
+        displayName: 'TU/e',
+    },
+
     {
         id: 4,
         name: 'Uppsala University',
         displayName: 'UU',
     },
     {
-        id: 5,
-        name: 'Siemens',
-        displayName: 'Siemens',
-    },
-    {
         id: 6,
         name: 'NLR - Royal Netherlands Aerospace Centre',
         displayName: 'NLR',
+    },
+    {
+        id: 5,
+        name: 'Siemens',
+        displayName: 'Siemens',
     },
 ]
