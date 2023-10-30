@@ -14,7 +14,6 @@ export const members = [
         institution: 'tu/e',
         role: 'phd',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Didem Gürdür Broo',
@@ -23,7 +22,6 @@ export const members = [
         institution: 'uu',
         role: 'phd',
         partner: 'academic',
-        link: 'https://didemgurdur.com/',
     },
     {
         name: 'Arabinda Gnosh',
@@ -32,7 +30,6 @@ export const members = [
         institution: 'MPI-SWS',
         role: 'phd',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Birgit Van Huijgevoort',
@@ -41,7 +38,6 @@ export const members = [
         institution: 'tu/e',
         role: 'phd',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Arash Bahari Kordabad',
@@ -50,7 +46,6 @@ export const members = [
         institution: 'MPI-SWS',
         role: 'phd',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Kevin Tom  Kurian',
@@ -59,7 +54,6 @@ export const members = [
         institution: 'tu/e',
         role: 'phd',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Erjen Lefeber',
@@ -68,7 +62,6 @@ export const members = [
         institution: 'tu/e',
         role: 'phd',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Siyuan Liu',
@@ -77,7 +70,6 @@ export const members = [
         institution: 'kth',
         role: 'phd',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Lars Lindemann',
@@ -86,7 +78,6 @@ export const members = [
         institution: 'kth',
         role: '',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Gregorio Marchesini',
@@ -95,7 +86,6 @@ export const members = [
         institution: 'kth',
         role: 'phd',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Maryam Sharifi',
@@ -104,7 +94,6 @@ export const members = [
         institution: 'kth',
         role: '',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Ana Tanevska',
@@ -113,7 +102,6 @@ export const members = [
         institution: 'uu',
         role: 'phd',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Lefteris Vlahakis',
@@ -122,7 +110,6 @@ export const members = [
         institution: 'kth',
         role: 'phd',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Ruohan Wang',
@@ -131,7 +118,6 @@ export const members = [
         institution: 'tu/e',
         role: 'phd',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Katie Winkle',
@@ -140,7 +126,6 @@ export const members = [
         institution: 'uu',
         role: 'phd',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Zengjie Zhang',
@@ -149,7 +134,6 @@ export const members = [
         institution: 'tu/e',
         role: 'phd',
         partner: 'academic',
-        link: '',
     },
     {
         name: 'Edwin Van Hassel',
@@ -158,7 +142,6 @@ export const members = [
         institution: 'siemens',
         role: '',
         partner: 'industry',
-        link: '',
     },
     {
         name: 'Eric Hu',
@@ -167,7 +150,6 @@ export const members = [
         institution: 'siemens',
         role: '',
         partner: 'industry',
-        link: '',
     },
     {
         name: 'Patrick Jonk',
@@ -176,7 +158,6 @@ export const members = [
         institution: 'nlr',
         role: 'phd',
         partner: 'industry',
-        link: '',
     },
     {
         name: 'Raymond Van Markwijk',
@@ -185,7 +166,6 @@ export const members = [
         institution: 'siemens',
         role: '',
         partner: 'industry',
-        link: '',
     },
 ]
 

@@ -1,16 +1,47 @@
 //Recommended string lengths:
+// Give or take a few words
 // Title: 20-characters
 // Description: 60-characters
 // Image: path to image downloaded from post
 // Link: Link to related LinkedIn post
 
+// Latest items should be appended to the start of the array.
+
+// {
+//     title: '',
+//     description: '',
+//     image: './assets/news/',
+//     link: '',
+// },
 export const newsItem = [
-    // {
-    //     title: '',
-    //     description: '',
-    //     image: './assets/news/',
-    //     link: '',
-    // },
+    {
+        title: 'Sadegh Soudjani visits Honda R&D facilities',
+        description:
+            'Sadegh Soudjani visited the Honda R&D facilities in Japan during the IFAC 2023...',
+        image: './assets/news/news_honda.jpg',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7113378872745676800',
+    },
+    {
+        title: 'Ethics Workshop',
+        description:
+            'Learn more about how our team in Uppsala University, led by Ginevra Castellano, addresses some of the ethical aspects of SymAware...',
+        image: './assets/news/news_ethics.jpg',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7112129351990530048',
+    },
+    {
+        title: 'Join Our Team!',
+        description:
+            "Would you like to be part of the SymAware team? We have an open postdoc position in Ginevra Castellano's team in Uppsala University, Sweden...",
+        image: './assets/news/news_uu_position.jpg',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7100088938773536768',
+    },
+    {
+        title: 'IFAC 2023',
+        description:
+            'Learn about the workshop our project leader, Dr Sadegh Soudjani co-organised in IFAC 2023: Data-Driven Approaches for Cyber-Physical Systems...',
+        image: './assets/news/news_ifac.jpg',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7109188363764514816',
+    },
     {
         title: 'Meet Dimos, partner of SymAware',
         description:
@@ -87,5 +118,11 @@ export const newsItem = [
             'Join Sofie Haesaert at Women in Data Science Eindhoven 2023: AI for the real world. A conference on diversity, inclusion and empowerment...',
         image: './assets/news/news_sofie_hasesart.jpg',
         link: 'https://www.linkedin.com/feed/update/urn:li:activity:7039246399019843584',
+    },
+    {
+        title: '',
+        description: '',
+        image: './assets/news/',
+        link: '',
     },
 ]

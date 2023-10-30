@@ -2,19 +2,19 @@
     <div class="search">
         <h1 class="heading_primary u-text-underline__sand">Meet the team</h1>
         <button
-            class="paragraph search__button dynamic--underline"
+            class="paragraph search__button dynamic--underline u-margin-right"
             (click)="selected = all"
         >
             Everyone
         </button>
         <button
-            class="paragraph search__button dynamic--underline"
+            class="paragraph search__button dynamic--underline u-margin-right"
             (click)="selected = 'academic'"
         >
             Academic Partners
         </button>
         <button
-            class="paragraph search__button dynamic--underline"
+            class="paragraph search__button dynamic--underline u-margin-right"
             (click)="selected = 'industry'"
         >
             Industrial Partners
@@ -112,12 +112,8 @@
                 />
             </div>
             <div class="wrapper_names">
-                <a href="{{ member.link }}">
-                    <p class="leader__name">{{ member.name }}</p>
-                    <p class="leader__role">{{ member.description }}</p>
-                </a>
-
-                <div></div>
+                <p class="leader__name">{{ member.name }}</p>
+                <p class="leader__role">{{ member.description }}</p>
             </div>
             <div style="margin-bottom: 4rem"></div>
         </div>

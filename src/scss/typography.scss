@@ -37,7 +37,22 @@
     position: relative;
     display: inline-block;
     &__white {
-        @extend .heading_secondary;
+        @extend .heading_tertiary;
+        color: $color-white !important;
+    }
+    @media screen and (min-width: 1600px) {
+        font-size: 1.5rem;
+    }
+}
+.heading_four {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $color-black;
+    margin: 1rem 0;
+    position: relative;
+    display: inline-block;
+    &__white {
+        @extend .heading_four;
         color: $color-white !important;
     }
     @media screen and (min-width: 1600px) {
@@ -47,12 +62,24 @@
 .paragraph {
     font-size: 1rem;
     font-weight: 400;
-    color: $color-font-blue;
+    color: $color-black;
     //margin-bottom: 1rem;
+
     @media screen and (min-width: 1600px) {
         font-size: 1.25rem;
     }
+    &__small {
+        @extend .paragraph;
+        font-size: 0.8rem;
 
+        @media screen and (min-width: 1600px) {
+            font-size: 1rem;
+        }
+    }
+    &__light {
+        @extend .paragraph;
+        color: $color-dark-grey;
+    }
     &__white {
         @extend .paragraph;
         color: $color-white;
@@ -63,7 +90,7 @@
     }
     &__highlighted {
         @extend .paragraph;
-        font-weight: 500;
+        font-weight: 400;
         margin: 0;
         color: $color-font-blue;
         &__dark {
@@ -77,6 +104,6 @@
     }
 }
 
-t-color-black {
+.t-color-black {
     color: $color-black !important;
 }

@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="banner">
+    <section class="banner">
         <div class="banner__half">
-            <h1 class="heading">BE PART OF THE TEAM</h1>
+            <h1 class="banner__heading">BE PART OF THE TEAM</h1>
             <p class="paragraph__white">
                 If you would like to work with us, browse the different openings
                 we have available.
@@ -9,52 +9,149 @@
         </div>
         <!--        <div class="banner__half">-->
         <img
-            class="wrapper_image"
+            class="banner__image"
             src="assets/images/symaware/symaware-art-transparent.svg"
         />
         <!--        </div>-->
-    </div>
+    </section>
+    <section class="content a-moveIn-bottom">
+        <h1 class="heading_primary u-text-underline__sand">
+            Available Positions
+        </h1>
+        <div class="wrapper_boxes">
+            <details class="box">
+                <summary class="box__heading">
+                    PhD/Postdoctoral position
+                </summary>
+                <div class="box__content">
+                    <img
+                        class="box__image u-margin-bottom"
+                        src="assets/images/consortium/mpi.svg"
+                    />
+                    <p
+                        class="paragraph u-text-underline__sand u-margin-bottom__small"
+                    >
+                        <strong>About The Role:</strong>
+                    </p>
+                    <p class="paragraph u-margin-bottom">
+                        The selected candidate will join the vibrant research
+                        community of this project and will take the main
+                        responsibility of developing an integrated software tool
+                        for situational awareness in multi-agent systems, with
+                        applications in autonomous vehicles and air traffic
+                        management systems. The candidate will also work on
+                        theoretical aspects of the research that brings together
+                        logical requirements, models, and task planning
+                        algorithms in multi-agent systems. There are extensive
+                        collaboration opportunities with the researchers at the
+                        Max Planck Institute. Having previous experience of
+                        software development and excellent communication skills
+                        are expected.
+                    </p>
+                    <p
+                        class="paragraph u-text-underline__sand u-margin-bottom__small"
+                    >
+                        <strong>Location:</strong>
+                    </p>
+                    <p class="paragraph u-margin-bottom">
+                        Max Planck Institute for Software Systems, Germany
+                    </p>
+                    <p
+                        class="paragraph u-text-underline__sand u-margin-bottom__small"
+                    >
+                        <strong>Deadline:</strong>
+                    </p>
+                    <p class="paragraph u-margin-bottom">No Deadline</p>
+                    <p
+                        class="paragraph u-text-underline__sand u-margin-bottom__small"
+                    >
+                        <strong>Apply:</strong>
+                    </p>
+                    <p class="paragraph u-margin-bottom">
+                        The interested candidate should contact Dr Sadegh
+                        Soudjani, the SymAware Coordinator, at
+                        <a
+                            href="mailto:sadegh@mpi-sws.org"
+                            class="u-text-underline__sand u-wrap-text"
+                            >sadegh@mpi-sws.org</a
+                        >
+                        with their full application materials.
+                    </p>
+                </div>
 
-    <div class="search">
-        <p class="paragraph">All</p>
-        <mat-form-field>
-            <mat-label class="paragraph">Institutions</mat-label>
-            <mat-select [(value)]="selected">
-                <mat-option class="paragraph"> All </mat-option>
-                <mat-option
-                    class="paragraph"
-                    [value]="inst.displayName"
-                    *ngFor="let inst of institutions"
-                >
-                    {{ inst.displayName }}
-                </mat-option>
-            </mat-select>
-        </mat-form-field>
-    </div>
-    <div class="wrapper_boxes">
-        <div class="box">
-            <p class="box__heading">Doctoral Trainee</p>
-
-            <p class="paragraph">
-                <img src="assets/icons/location.png" class="box__photo" />
-                Newcastle University, UK
-            </p>
+                <!--            <p class="paragraph">-->
+                <!--                <img src="assets/icons/location.png" class="box__photo" />-->
+                <!--                Newcastle University, UK-->
+                <!--            </p>-->
+            </details>
         </div>
-        <div class="box">
-            <p class="box__heading">Doctoral Trainee</p>
+        <div class="wrapper_boxes">
+            <details class="box">
+                <summary class="box__heading">
+                    Postdoctoral Position in Human-Robot Interaction
+                </summary>
+                <div class="box__content">
+                    <img
+                        class="box__image u-margin-bottom"
+                        src="assets/images/consortium/uu.png"
+                    />
+                    <p
+                        class="paragraph u-text-underline__sand u-margin-bottom__small"
+                    >
+                        <strong>About The Role:</strong>
+                    </p>
+                    <p class="paragraph u-margin-bottom">
+                        At the Uppsala Social Robotics Lab, we have an open
+                        postdoc position in human-robot interaction. The postdoc
+                        position is part of the Horizon Europe SymAware
+                        (Symbolic logic framework for situational awareness in
+                        mixed autonomy) project, and will be focused on
+                        human-in-the-loop design and automation methods for
+                        ethical and trustworthy human-robot interaction.
+                        Specific topics of interest include robot transparency,
+                        multimodal interaction, algorithmic fairness and
+                        gender-sensitive design to counteract gender biases in
+                        social robots.
+                    </p>
+                    <p
+                        class="paragraph u-text-underline__sand u-margin-bottom__small"
+                    >
+                        <strong>Location:</strong>
+                    </p>
+                    <p class="paragraph u-margin-bottom">
+                        Uppsala Social Robotics Lab Department of Information
+                        Technology Uppsala University, Sweden
+                    </p>
+                    <p
+                        class="paragraph u-text-underline__sand u-margin-bottom__small"
+                    >
+                        <strong>Deadline:</strong>
+                    </p>
+                    <p class="paragraph u-margin-bottom">October 26th</p>
+                    <p
+                        class="paragraph u-text-underline__sand u-margin-bottom__small"
+                    >
+                        <strong>Apply:</strong>
+                    </p>
+                    <p class="paragraph u-margin-bottom">
+                        More information and application at this link:
+                        <a
+                            href="https://uu.varbi.com/en/what:job/jobID:652469/"
+                            class="u-text-underline__sand u-wrap-text"
+                            >https://uu.varbi.com/en/what:job/jobID:652469/</a
+                        >
+                    </p>
+                </div>
 
-            <p class="paragraph">
-                <img src="assets/icons/location.png" class="box__photo" />
-                Newcastle University, UK
-            </p>
+                <!--            <p class="paragraph">-->
+                <!--                <img src="assets/icons/location.png" class="box__photo" />-->
+                <!--                Newcastle University, UK-->
+                <!--            </p>-->
+            </details>
         </div>
-        <div class="box">
-            <p class="box__heading">Doctoral Trainee</p>
-
-            <p class="paragraph">
-                <img src="assets/icons/location.png" class="box__photo" />
-                Newcastle University, UK
-            </p>
-        </div>
-    </div>
+    </section>
+    <section class="content a-moveIn-bottom u-margin-bottom">
+        <h1 class="heading_primary u-text-underline__sand">Past Positions</h1>
+        <p>empty</p>
+    </section>
 </div>

@@ -1,51 +1,55 @@
 @import '../../scss/variables';
-
+@import '../../scss/mixins';
 .container {
     margin: 0;
     width: 100%;
-    /*padding: 2rem;*/
 
     .banner {
-        padding: 3rem 4rem 1rem 4rem;
+        padding: 2rem 6rem 1rem 4rem;
         background: linear-gradient(#012869, #031c45);
-        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         flex-flow: row;
-        max-height: 12rem;
+        max-height: 16rem;
+        height: 16rem;
+        gap: 4rem;
+        @include respond(phone) {
+            padding: 2rem;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 2rem;
+            max-height: 18rem;
+            height: 20rem;
+        }
+
         &__half {
-            width: 50%;
+            display: flex;
+            flex-flow: wrap column;
+            text-align: center;
+        }
+
+        &__heading {
+            font-size: 3rem;
+            margin: 0;
+            font-weight: 800;
+            color: $color-sand;
+            filter: drop-shadow(3px 3px 0px #bd6f13);
             @media screen and (max-width: 900px) {
-                width: 80%;
+                font-size: 2.5rem;
             }
         }
-        @media screen and (max-width: 900px) {
-            flex-flow: column;
-            padding: 1rem;
-            width: auto;
-        }
-    }
-
-    .heading {
-        font-size: 3rem;
-        margin: 0;
-        font-weight: 800;
-        color: $color-sand;
-        filter: drop-shadow(3px 3px 0px #bd6f13);
-        @media screen and (max-width: 900px) {
-            font-size: 2.5rem;
-        }
-    }
-    .image {
-        width: 4rem;
-        height: 9rem;
-        flex-basis: 0;
-    }
-    .wrapper_image {
-        margin-right: 6rem;
-        @media screen and (max-width: 900px) {
-            display: none;
+        &__image {
+            width: 30rem;
+            height: 37.5rem;
+            @include respond(tab-land) {
+                width: 25rem;
+                height: 20rem;
+            }
+            @include respond(phone) {
+                width: 20rem;
+                height: 10rem;
+            }
         }
     }
 }
@@ -53,62 +57,93 @@
 .wrapper_boxes {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 1rem;
-    padding: 2rem 8rem 8rem 8rem;
-    @media screen and (max-width: 900px) {
-        padding: 2rem 4rem 4rem 4rem;
-        align-items: center;
+    flex-flow: wrap;
+    padding: 2rem 0;
+
+    @include respond(phone) {
+        padding: 2rem 0;
+        align-items: flex-start;
         flex-flow: column;
         gap: 2rem;
     }
 
     .box {
-        display: flex;
-        flex-flow: column;
-        justify-content: space-between;
         background-color: #f2f2f2;
+        transition: 0.25s;
         border-radius: 1rem;
-        box-shadow: rgb(0, 0, 0, 0.25) 0 5px 5px;
         padding: 2rem;
-        height: 4rem;
-        width: 16rem;
-        @media screen and (min-width: 1600px) {
-            height: 5rem;
-            width: 18rem;
-            padding: 2rem;
+        box-shadow: rgb(0, 0, 0, 0.25) 0 5px 5px;
+        height: 1.5rem;
+        width: 60rem;
+        &[open] {
+            min-height: 34rem;
+            height: 36rem;
+            transition: 0.25s;
         }
-        @media screen and (max-width: 900px) {
-            height: 5rem;
-            width: 12rem;
-            padding: 2rem;
+        @include respond(big-desktop) {
+            height: 1.9rem;
+            width: 70rem;
+            padding: 2.5rem;
+            &[open] {
+                height: 45rem;
+            }
+        }
+        @include respond(tab-land) {
+            height: 2rem;
+            width: 45rem;
+            &[open] {
+                height: 39rem;
+            }
+        }
+        @include respond(phone) {
+            height: 4rem;
+            width: 20rem;
+            padding: 1.75rem 1rem 1rem 1.5rem;
+            &[open] {
+                height: 56rem;
+            }
         }
         &__heading {
             font-size: 1.25rem;
             color: $color-dark-blue;
             font-weight: 600;
             margin: 0;
-
-            @media screen and (min-width: 1600px) {
+            cursor: pointer;
+            @include respond(big-desktop) {
                 font-size: 1.5rem;
             }
         }
-
-        &__photo {
-            width: 1rem;
+        &__content {
+            padding: 2rem;
+            @include respond(phone) {
+                padding: 2rem 0;
+            }
+        }
+        &__image {
+            width: 8rem;
             height: auto;
-            align-self: center;
+            @include respond(big-desktop) {
+                width: 12rem;
+            }
         }
     }
 }
 
 .search {
     display: flex;
-    margin-top: 4rem;
-    padding: 0 4rem 0 8rem;
     gap: 2rem;
-    margin-left: 1rem;
 
     @media screen and (max-width: 900px) {
         padding: 0 4rem 0 4rem;
+    }
+}
+.content {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    @include respond(phone) {
     }
 }

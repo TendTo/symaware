@@ -12,7 +12,7 @@ import KeenSlider, { KeenSliderInstance } from 'keen-slider'
 })
 export class NewsComponent implements OnInit {
     title = 'news'
-    currentSlide: number = 1
+    currentSlide: number = 0
     dotHelper: Array<Number> = []
     newsItems = newsItem
     @ViewChild('sliderRef') sliderRef: ElementRef<HTMLElement>
@@ -22,31 +22,28 @@ export class NewsComponent implements OnInit {
     ngAfterViewInit() {
         setTimeout(() => {
             this.slider = new KeenSlider(this.sliderRef.nativeElement, {
-                slides: {
-                    perView: 3,
-                },
                 mode: 'free-snap',
-                initial: this.currentSlide,
+                initial: 0,
                 slideChanged: (s) => {
                     this.currentSlide = s.track.details.rel
                 },
                 breakpoints: {
-                    '(max-width: 1200px)': {
-                        slides: {
-                            perView: 2,
-                        },
-                        initial: 0,
+                    '(min-width: 400px)': {
+                        slides: { perView: 1, spacing: 5 },
                     },
-                    '(max-width: 600px)': {
-                        slides: {
-                            perView: 1,
-                        },
-                        initial: 0,
+                    '(min-width: 700px)': {
+                        slides: { perView: 2, spacing: 10 },
+                    },
+                    '(min-width: 1200px)': {
+                        slides: { perView: 3, spacing: 0 },
+                    },
+                    '(min-width: 1800px)': {
+                        slides: { perView: 4, spacing: 0 },
                     },
                 },
             })
             this.dotHelper = [
-                ...Array(this.slider.track.details.slides.length).keys(),
+                ...Array(this.slider.track.details.slides.length - 2).keys(),
             ]
         })
     }

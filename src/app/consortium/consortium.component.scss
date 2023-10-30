@@ -1,8 +1,8 @@
 @import '../../scss/variables';
 
 .wrapper_consortium {
-    margin: 0;
     padding: 2rem 6.5rem 4rem 6.5rem;
+
     background-image: url('../../assets/images/symaware/vector-symaware_hero.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,7 +16,7 @@
     }
 }
 .consortium {
-    margin-top: 2rem;
+    margin: 2rem auto;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
@@ -33,7 +33,7 @@
     border-radius: 1rem;
     max-height: 18rem;
     max-width: 22rem;
-    min-height: 12rem;
+    min-height: 18rem;
     min-width: 22rem;
     padding: 1.5rem;
     align-content: space-between;

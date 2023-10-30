@@ -5,7 +5,7 @@
                 class="cat-button heading_primary u-text-underline__sand"
                 (click)="selected = 'all'; sort_selected = 'all'"
             >
-                All Publications
+                Publications
             </button>
         </div>
         <button
@@ -103,6 +103,12 @@
             >
                 WP9
             </button>
+            <button
+                class="paragraph u-margin-right cat-button"
+                (click)="sort_selected = '10'"
+            >
+                WP10
+            </button>
         </div>
     </div>
     <div class="wrapper_publications">
@@ -163,21 +169,31 @@
                     <div
                         class="publication__title paragraph__highlighted__light u-text-underline"
                     >
-                        <!--                        <a href="{{ deliverable.link }}" target="_blank">-->
-                        {{ deliverable.title }}
-                        <!--                        </a>-->
+                        <a
+                            *ngIf="deliverable.link; else elseBlock"
+                            href="{{ deliverable.link }}"
+                            target="_blank"
+                        >
+                            {{ deliverable.title }}
+                        </a>
+                        <ng-template #elseBlock>
+                            <p>
+                                {{ deliverable.title }}
+                            </p>
+                        </ng-template>
                     </div>
 
                     <div class="publication__authors paragraph">
-                        Deliverable Number: {{ deliverable.number }}
+                        <strong> Deliverable Number: </strong>
+                        {{ deliverable.number }}
                     </div>
-                    <!--                    <a href="{{ deliverable.link }}" target="_blank">-->
-                    <!--                        <button-->
-                    <!--                            class="publication__button paragraph__highlighted"-->
-                    <!--                        >-->
-                    <!--                            See Publication-->
-                    <!--                        </button>-->
-                    <!--                    </a>-->
+                    <div class="publication__authors paragraph">
+                        <strong>Due Date:</strong> {{ deliverable.due }}
+                    </div>
+                    <div class="publication__authors paragraph">
+                        <strong>Submission Date:</strong>
+                        {{ deliverable.submitted }}
+                    </div>
                 </div>
             </div>
         </div>

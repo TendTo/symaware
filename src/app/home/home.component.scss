@@ -7,17 +7,18 @@
     overflow: clip;
 
     .landing-section {
-        margin-bottom: 8rem;
+        margin-bottom: 4rem;
         margin-left: 5rem;
         padding: 5rem 6.5rem 5rem
             clamp(5rem, calc(50vw - 46.5rem), calc(50vw - 46.5rem));
         @media screen and (min-width: 1440px) {
-            margin-bottom: 12rem;
+            margin-bottom: 2rem;
         }
 
         @include respond(phone) {
             display: flex;
             align-content: center;
+            align-items: center;
             flex-flow: column wrap;
             margin: 0;
             padding: 2rem 1rem;
@@ -42,12 +43,12 @@
         &__first {
             color: $color-dark-blue;
             text-shadow: 0.25rem 0.25rem $color-sand;
-            margin: 0 1.5rem 0 0;
             font-size: 4.2rem;
+
             @include respond(phone) {
                 color: $color-sand;
                 text-shadow: 0.25rem 0.25rem #bd6f13;
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
             @include respond(tab-land) {
                 font-size: 3.7rem;
@@ -59,11 +60,12 @@
 
         &__second {
             color: $color-sand;
-            margin: 0;
             text-shadow: 0.25rem 0.25rem #bd6f13;
             font-size: 4.2rem;
+            margin-left: 1.5rem;
             @include respond(phone) {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
+                text-align: center;
             }
             @include respond(tab-land) {
                 font-size: 3.7rem;
@@ -83,7 +85,7 @@
             width: 35rem;
         }
         @include respond(tab-land) {
-            width: 22rem;
+            width: 24rem;
         }
         @include respond(big-desktop) {
             width: 30rem;
@@ -94,7 +96,7 @@
         width: auto;
 
         @include respond(phone) {
-            height: 2.5rem;
+            height: 3rem;
         }
         @media screen and (min-width: 1600px) {
             height: 3.125rem;

@@ -1,9 +1,11 @@
+@import '../../scss/mixins';
+
 .wrapper_footer {
     position: relative;
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 2rem 4rem;
+    min-height: 10rem;
     @media screen and (max-width: 900px) {
         padding: 2rem;
         display: flex;
@@ -12,15 +14,17 @@
         justify-content: center;
     }
     background-color: #f5f5f5;
-    filter: drop-shadow(0px -6px 6px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px -6px 4px rgba(0, 0, 0, 0.1));
 }
 
 .footer {
-    margin: 0 2rem;
+    margin: 0 2rem 0rem 0;
     display: flex;
     justify-content: space-between;
+    padding: 2rem 4rem;
     @media screen and (max-width: 900px) {
         flex-flow: column wrap;
+        margin: 0;
     }
 }
 
@@ -28,16 +32,18 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    max-width: 34rem;
+    max-width: 32rem;
     @media screen and (max-width: 900px) {
         flex-flow: column wrap;
         margin-bottom: 1rem;
+        max-width: 24rem;
     }
     &__legal {
         display: flex;
         flex-flow: row;
         @media screen and (max-width: 900px) {
             justify-content: space-between;
+            margin-top: 1rem;
         }
     }
 
@@ -53,7 +59,7 @@
 
     &__flag {
         width: auto;
-        height: 98px; /* Size of Funding Image */
+        height: 5rem; /* Size of Funding Image */
         margin-right: 1rem;
         @media screen and (max-width: 900px) {
             margin-right: 0;
@@ -62,9 +68,18 @@
 }
 
 .social_media {
+    @include respond(phone) {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
     &__links {
         display: flex;
         justify-content: space-around;
+        gap: 1rem;
+        @include respond(phone) {
+            justify-content: center;
+        }
     }
 }
 
@@ -73,10 +88,22 @@
     height: auto;
 
     @media screen and (min-width: 1600px) {
-        width: 3rem;
+        width: 2.25rem;
     }
 }
 
 .gap {
     margin: 0 1rem;
+}
+
+.buildings {
+    position: absolute;
+    width: 100vw;
+    height: auto;
+    bottom: 0;
+    filter: contrast(10%) brightness(1.75);
+    z-index: -1;
+    @include respond(phone) {
+        filter: contrast(100%) brightness(1);
+    }
 }

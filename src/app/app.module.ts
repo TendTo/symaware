@@ -18,10 +18,11 @@ import { ContactComponent } from './contact/contact.component'
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 import { FooterComponent } from './footer/footer.component'
 import { NewsComponent } from './news/news.component'
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { PositionsComponent } from './positions/positions.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { PositionsComponent } from './positions/positions.component'
 import { DemonstrationsComponent } from './demonstrations/demonstrations.component'
-
+import { MatIconModule } from '@angular/material/icon';
+import { EicPathfinderChallengeComponent } from './eic-pathfinder-challenge/eic-pathfinder-challenge.component'
 @NgModule({
     declarations: [
         AppComponent,
@@ -37,6 +38,7 @@ import { DemonstrationsComponent } from './demonstrations/demonstrations.compone
         FilterPipe,
         PositionsComponent,
         DemonstrationsComponent,
+        EicPathfinderChallengeComponent,
     ],
     imports: [
         BrowserModule,
@@ -47,6 +49,7 @@ import { DemonstrationsComponent } from './demonstrations/demonstrations.compone
         MatSelectModule,
         BrowserAnimationsModule,
         MatProgressSpinnerModule,
+        MatIconModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

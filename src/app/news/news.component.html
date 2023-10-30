@@ -1,8 +1,8 @@
 <div class="boxes">
     <div class="navigation-wrapper">
-        <div class="keen-slider keen-slider--horizontal" #sliderRef>
+        <div class="keen-slider keen-slider--vertical" #sliderRef>
             <div
-                class="keen-slider__slide slide-size u-padding-vert"
+                class="keen-slider__slide u-padding-vert"
                 *ngFor="let item of newsItems"
             >
                 <div class="box_news">
@@ -11,7 +11,9 @@
                     </div>
                     <div class="wrapper_text">
                         <a href="{{ item.link }}" target="_blank">
-                            <h2 class="heading_tertiary">{{ item.title }}</h2>
+                            <h2 class="heading_tertiary">
+                                {{ item.title }}
+                            </h2>
                             <p class="paragraph u-no-margin">
                                 {{ item.description }}
                             </p>
