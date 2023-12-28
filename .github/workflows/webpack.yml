@@ -1,7 +1,7 @@
 name: NodeJS with Webpack
 
 on:
-  merge:
+  pull_request:
     branches: [ "deployment" ]
 
 jobs:
