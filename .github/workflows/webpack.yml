@@ -1,7 +1,7 @@
 name: NodeJS with Webpack
 
 on:
-  push:
+  merge:
     branches: [ "deployment" ]
 
 jobs:
