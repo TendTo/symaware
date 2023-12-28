@@ -218,7 +218,7 @@ export const leaders = [
     },
     {
         id: 6,
-        name: 'Dr. Mohsen Allrezael',
+        name: 'Dr. Mohsen Allrezaei',
         image: '../../assets/images/people/mohsen-allrezael.png',
         companyLogo: '../../assets/images/consortium/siemens.png',
         institution: 'siemens',
