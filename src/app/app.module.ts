@@ -21,7 +21,7 @@ import { NewsComponent } from './news/news.component'
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { PositionsComponent } from './positions/positions.component'
 import { DemonstrationsComponent } from './demonstrations/demonstrations.component'
-import { MatIconModule } from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon'
 import { EicPathfinderChallengeComponent } from './eic-pathfinder-challenge/eic-pathfinder-challenge.component'
 @NgModule({
     declarations: [
