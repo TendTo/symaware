@@ -15,6 +15,34 @@
 // },
 export const newsItem = [
     {
+        title: 'New Paper!',
+        description:
+            'Arabinda Ghosh has just presented a paper that dives into enhancing the safety of autonomous driving through a high-level perspective..',
+        image: './assets/news/news_paper.jpg',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7135056652470226944',
+    },
+    {
+        title: 'Awareness in Multi-agent Systems',
+        description:
+            'SymAware seeks to facilitate work between humans and autonomous systems by integrating awareness...',
+        image: './assets/news/news_multi.jpg',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7127804532029341696',
+    },
+    {
+        title: 'Brussels Workshop',
+        description:
+            "Ana Tanevska and Arabinda Ghosh represented the team in the 'Inside the Ethics of AI Awareness' workshop...",
+        image: './assets/news/news_brussels.jpg',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7120197975502393344',
+    },
+    {
+        title: 'Join Our Team',
+        description:
+            "You can still be part of our team! We have an open postdoc position in Ginevra Castellano's team in Uppsala University...",
+        image: './assets/news/news_join.jpg',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7119366705662832640',
+    },
+    {
         title: 'Sadegh Soudjani visits Honda R&D facilities',
         description:
             'Sadegh Soudjani visited the Honda R&D facilities in Japan during the IFAC 2023...',
