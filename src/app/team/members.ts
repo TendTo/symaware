@@ -167,6 +167,14 @@ export const members = [
         role: '',
         partner: 'industry',
     },
+    {
+        name: 'Ernesto Casablanca',
+        image: '../../assets/images/people/ernesto-casaablanca.jpg',
+        description: 'PhD Student',
+        institution: 'MPI-SWS',
+        role: 'phd',
+        partner: 'academic',
+    },
 ]
 
 export const leaders = [
