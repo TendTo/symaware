@@ -169,7 +169,7 @@ export const members = [
     },
     {
         name: 'Ernesto Casablanca',
-        image: '../../assets/images/people/ernesto-casaablanca.jpg',
+        image: '../../assets/images/people/ernesto-casablanca.jpg',
         description: 'PhD Student',
         institution: 'MPI-SWS',
         role: 'phd',
