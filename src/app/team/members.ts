@@ -32,14 +32,6 @@ export const members = [
         partner: 'academic',
     },
     {
-        name: 'Birgit Van Huijgevoort',
-        image: '../../assets/images/people/birgit-van-huijgevoort.jpg',
-        description: 'PhD Student',
-        institution: 'tu/e',
-        role: 'phd',
-        partner: 'academic',
-    },
-    {
         name: 'Arash Bahari Kordabad',
         image: '../../assets/images/people/arash-bahari-kordabad.png',
         description: 'Postdoctoral Researcher',
@@ -77,7 +69,7 @@ export const members = [
         description: 'Assistant Professor',
         institution: 'kth',
         role: '',
-        partner: 'academic',
+        partner: 'affiliated',
     },
     {
         name: 'Gregorio Marchesini',
@@ -175,6 +167,38 @@ export const members = [
         role: 'phd',
         partner: 'academic',
     },
+    {
+        name: 'Natalia Calvo-Barajas',
+        image: '../../assets/images/people/natalia_calvo_barajas.jpg',
+        description: 'Postdoctoral Researcher',
+        institution: 'UU',
+        role: 'phd',
+        partner: 'academic',
+    },
+    {
+        name: 'Ronald Cumbal',
+        image: '../../assets/images/people/ronald_cumbal.jpg',
+        description: 'Postdoctoral Researcher',
+        institution: 'UU',
+        role: 'phd',
+        partner: 'academic',
+    },
+    {
+        name: 'Alexandros Rouchitsas',
+        image: '../../assets/images/people/alexandros_rouchitsas.jpg',
+        description: 'Postdoctoral Researcher',
+        institution: 'UU',
+        role: 'phd',
+        partner: 'academic',
+    },
+    {
+        name: 'Birgit Van Huijgevoort',
+        image: '../../assets/images/people/birgit-van-huijgevoort.jpg',
+        description: ' Teacher and Researcher',
+        institution: 'Avans',
+        role: 'phd',
+        partner: 'affiliated',
+    },
 ]
 
 export const leaders = [
@@ -226,7 +250,7 @@ export const leaders = [
     },
     {
         id: 6,
-        name: 'Dr. Mohsen Allrezaei',
+        name: 'Dr. Mohsen Alirezaei',
         image: '../../assets/images/people/mohsen-allrezael.png',
         companyLogo: '../../assets/images/consortium/siemens.png',
         institution: 'siemens',
@@ -278,5 +302,10 @@ export const institutions = [
         id: 5,
         name: 'Siemens',
         displayName: 'Siemens',
+    },
+    {
+        id: 6,
+        name: 'Avans University of Applied Sciences',
+        displayName: 'Avans',
     },
 ]
