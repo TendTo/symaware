@@ -310,3 +310,19 @@ $degrees: 5deg;
 .page {
     overflow: clip;
 }
+
+.flex-center {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.symaware-introduction-wrapper {
+    margin: 2rem 0;
+}
+
+.symaware-introduction {
+    width: 100%;
+    max-width: 1024px;
+}
