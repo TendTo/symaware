@@ -117,7 +117,13 @@
                     alt="{{ member.name }}"
                 />
             </div>
+            <a href="{{ member.lab_link }}" target="_blank" *ngIf="member.lab_link">
             <div class="wrapper_names">
+                <p class="leader__name">{{ member.name }}</p>
+                <p class="leader__role">{{ member.description }}</p>
+            </div>
+            </a>
+            <div class="wrapper_names" *ngIf="!member.lab_link">
                 <p class="leader__name">{{ member.name }}</p>
                 <p class="leader__role">{{ member.description }}</p>
             </div>
