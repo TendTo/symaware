@@ -1,0 +1,24 @@
+name: Build and Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@latest
+      - uses: chill-viking/npm-ci@latest
+        name: Install npm dependencies
+      - name: Build
+        run: npm run build
+
+      - name: Push To Server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          source: dist/www.symaware.eu
+          target: /www/sws-websites/
