@@ -39,10 +39,22 @@
                 2022
             </button>
             <button
-                class="paragraph cat-button"
+                class="paragraph u-margin-right cat-button"
                 (click)="sort_selected = '2023'"
             >
                 2023
+            </button>
+            <button
+                class="paragraph u-margin-right cat-button"
+                (click)="sort_selected = '2024'"
+            >
+                2024
+            </button>
+            <button
+                class="paragraph cat-button"
+                (click)="sort_selected = '2025'"
+            >
+                2025
             </button>
         </div>
         <div
@@ -127,17 +139,22 @@
                     <div
                         class="publication__title paragraph__highlighted__light u-text-underline"
                     >
-                        <a href="{{ publication.link }}" target="_blank">
+                        <a *ngIf="publication.doi; else elseBlock" href="https://doi.org/{{ publication.doi }}" target="_blank">
                             {{ publication.title }}
                         </a>
+                            <ng-template #elseBlock>
+                            <p>
+                                {{ publication.title }}
+                            </p>
+                        </ng-template>
                     </div>
                     <div class="publication__authors paragraph">
                         Authors: {{ publication.authors }}
                     </div>
-                    <div class="publication__authors paragraph">
+                    <div *ngIf="publication.doi" class="publication__authors paragraph">
                         DOI: {{ publication.doi }}
                     </div>
-                    <a href="{{ publication.link }}" target="_blank">
+                    <a *ngIf="false" href="{{ publication.link }}" target="_blank">
                         <button
                             class="publication__button paragraph__highlighted"
                         >
