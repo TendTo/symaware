@@ -148,11 +148,20 @@
                             </p>
                         </ng-template>
                     </div>
+                    <div *ngIf="publication.type_pub" class="publication__type_pub paragraph">
+                        <i>{{ publication.type_pub }}</i>
+                    </div>
                     <div class="publication__authors paragraph">
-                        Authors: {{ publication.authors }}
+                        <b>Authors:</b> {{ publication.authors }}
+                    </div>
+                    <div *ngIf="publication.consortium_partner" class="publication__consortium_partner paragraph">
+                        <b>Consortium members:</b> {{ publication.consortium_partner }}
+                    </div>
+                    <div class="publication__year paragraph">
+                        <b>Year:</b> {{ publication.year }}
                     </div>
                     <div *ngIf="publication.doi" class="publication__authors paragraph">
-                        DOI: {{ publication.doi }}
+                        <b>DOI:</b> {{ publication.doi }}
                     </div>
                     <a *ngIf="false" href="{{ publication.link }}" target="_blank">
                         <button
