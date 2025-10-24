@@ -149,19 +149,22 @@
                         </ng-template>
                     </div>
                     <div *ngIf="publication.type_pub" class="publication__type_pub paragraph">
-                        <i>{{ publication.type_pub }}</i>
+                        <em>{{ publication.type_pub }}</em>
                     </div>
                     <div class="publication__authors paragraph">
-                        <b>Authors:</b> {{ publication.authors }}
+                        <strong>Authors:</strong> {{ publication.authors }}
                     </div>
                     <div *ngIf="publication.consortium_partner" class="publication__consortium_partner paragraph">
-                        <b>Consortium members:</b> {{ publication.consortium_partner }}
+                        <strong>Partners:</strong> {{ publication.consortium_partner }}
                     </div>
                     <div class="publication__year paragraph">
-                        <b>Year:</b> {{ publication.year }}
+                        <strong>Year:</strong> {{ publication.year }}
                     </div>
-                    <div *ngIf="publication.doi" class="publication__authors paragraph">
-                        <b>DOI:</b> {{ publication.doi }}
+                    <div *ngIf="publication.doi" class="paragraph">
+                        <a href="https://doi.org/{{ publication.doi }}" target="_blank">
+                            <strong>DOI:</strong> 
+                            <span class="u-text-underline">{{ publication.doi }}</span>
+                        </a>
                     </div>
                     <a *ngIf="false" href="{{ publication.link }}" target="_blank">
                         <button
@@ -188,7 +191,7 @@
                 <div
                     class="publication"
                     *ngIf="
-                        deliverable.work_package == sort_selected ||
+                        deliverable.wp_number == sort_selected ||
                         sort_selected == 'all'
                     "
                 >
@@ -211,14 +214,19 @@
 
                     <div class="publication__authors paragraph">
                         <strong> Deliverable Number: </strong>
-                        {{ deliverable.number }}
+                        {{ deliverable.deliverable_related_no }}
                     </div>
                     <div class="publication__authors paragraph">
-                        <strong>Due Date:</strong> {{ deliverable.due }}
+                        <strong> Lead: </strong>
+                        {{ deliverable.lead }}
+                    </div>
+                    <div class="publication__authors paragraph">
+                        <strong>Due Date:</strong>
+                        {{ deliverable.new_due_date || deliverable.due_date }}
                     </div>
                     <div class="publication__authors paragraph">
                         <strong>Submission Date:</strong>
-                        {{ deliverable.submitted }}
+                        {{ deliverable.delivery_date || 'TBD' }}
                     </div>
                 </div>
             </div>

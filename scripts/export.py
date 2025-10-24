@@ -4,6 +4,7 @@
 #     "pandas",
 #     "odfpy",
 #     "habanero",
+#     "openpyxl",
 # ]
 # ///
 import pandas as pd
@@ -83,8 +84,6 @@ def updated_column_names() -> str:
 def cleanup_excel():
     df = pd.read_excel("pubs.ods", header=1, engine="odf")
 
-
-
     df.columns = updated_column_names()
     # change the open_access column to boolean
     df["open_access"] = df["open_access"].map({"Yes": True, "No": False, "yes": True, "no": False})
@@ -99,7 +98,6 @@ def cleanup_excel():
     # print(df["open_access"].drop_duplicates().to_list())
     # print(df["peer_reviewed"].drop_duplicates().to_list())
 
-
     # Drop rows where 'title' is NaN
     df.dropna(subset=["title", "year"], inplace=True)
     # Year column to int
@@ -112,10 +110,10 @@ def cleanup_excel():
 
     def get_doi(title: str) -> str:
         try:
-            result = cr.works(query = title)
-            items = result['message']['items']
+            result = cr.works(query=title)
+            items = result["message"]["items"]
             if items:
-                return items[0]['DOI']
+                return items[0]["DOI"]
         except Exception as e:
             print(f"Error fetching DOI for {title}: {e}")
         return ""
@@ -124,6 +122,7 @@ def cleanup_excel():
 
     # df.to_json("pubs.json", orient="records", date_format="iso")
 
+
 def main() -> None:
     df = pd.read_json("pubs.json")
 
@@ -131,14 +130,64 @@ def main() -> None:
     df["open_access"] = df["open_access"].map({0.0: False, 1.0: True})
     df["peer_reviewed"] = df["peer_reviewed"].map({0.0: False, 1.0: True})
     df["apc_charged"] = df["apc_charged"].map({"Yes": True, "No": False, "yes": True, "no": False})
+    df["consortium_partner"] = df["consortium_partner"].apply(
+        lambda x: (x.strip()[:-1] if x.strip()[-1] == "," else x.strip()) if isinstance(x, str) else x
+    )
+    df["month"] = df["month"].apply(lambda x: x.strip() if isinstance(x, str) else x)
+    df["temp_month_number"] = df["month"].map(
+        {
+            "January": 1,
+            "February": 2,
+            "March": 3,
+            "April": 4,
+            "May": 5,
+            "June": 6,
+            "July": 7,
+            "August": 8,
+            "September": 9,
+            "October": 10,
+            "November": 11,
+            "December": 12,
+        }
+    ).fillna(13)
 
     print(df["apc_charged"].value_counts())
     print(df["eu_platform"].value_counts())
     print(df["open_access"].value_counts())
     print(df["peer_reviewed"].value_counts())
 
+    df.sort_values(by=["year", "temp_month_number"], inplace=True)
+    df.drop(columns=["temp_month_number"], inplace=True)
+
     df.to_json("new_pubs.json", orient="records", date_format="iso")
 
+
+def updated_deliverables_column_names() -> str:
+    return [
+        "wp_number",
+        "deliverable_related_no",
+        "deliverable_no",
+        "title",
+        "description",
+        "lead",
+        "type",
+        "dissemination_level",
+        "due_date",
+        "new_due_date",
+        "delivery_date",
+        "approval_date",
+        "status",
+    ]
+
+
+def deliverables() -> None:
+    df = pd.read_excel("Deliverables.xlsx", engine="openpyxl", header=4)
+    df = df[df.columns[1:]]  # drop first unnamed column
+    df.columns = updated_deliverables_column_names()
+    df["wp_number"] = df["wp_number"].apply(lambda x: int(x[2:]) if isinstance(x, str) else x).astype(str)
+    df["deliverable_no"] = df["deliverable_no"].apply(lambda x: int(x[1:]) if isinstance(x, str) else x).astype(str)
+    df["link"] = ""
+    df.to_json("deliverables.json", orient="records", date_format="iso")
 
 
 if __name__ == "__main__":
