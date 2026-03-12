@@ -23,6 +23,7 @@ import { PositionsComponent } from './positions/positions.component'
 import { DemonstrationsComponent } from './demonstrations/demonstrations.component'
 import { MatIconModule } from '@angular/material/icon'
 import { EicPathfinderChallengeComponent } from './eic-pathfinder-challenge/eic-pathfinder-challenge.component'
+import { SoftwareComponent } from './software/software.component'
 @NgModule({
     declarations: [
         AppComponent,
@@ -39,6 +40,7 @@ import { EicPathfinderChallengeComponent } from './eic-pathfinder-challenge/eic-
         PositionsComponent,
         DemonstrationsComponent,
         EicPathfinderChallengeComponent,
+        SoftwareComponent,
     ],
     imports: [
         BrowserModule,

@@ -1,0 +1,138 @@
+<div class="wrapper_software">
+    <div class="heading_primary__white u-text-underline__sand a-fade-in">
+        SymAware Framework
+    </div>
+    <div class="wrapper_box a-moveIn-bottom">
+
+        <!-- Overview -->
+        <div class="wrapper_box__card wrapper_box__card--wide">
+            <h1 class="heading_secondary u-text-underline">Overview</h1>
+            <p class="paragraph">
+                The <strong>SymAware framework</strong> is a modular, extensible collection of Python packages,
+                with the goal of providing a unified software infrastructure for real-time control of autonomous agents
+                (e.g., drones, vehicles)
+                in complex, dynamic environments.
+                It comes with out-of-the-box implementations of core components, such as situational-aware controllers,
+                perception systems, and communication modules,
+                and it can interface with different simulators (e.g., Pybullet, Prescan, Carla) and ROS-based real-world
+                deployments.
+            </p>
+        </div>
+
+        <!-- Installation -->
+        <div class="wrapper_box__card wrapper_box__card--wide">
+            <h1 class="heading_secondary u-text-underline">Installation</h1>
+            <p class="paragraph">Install the base package via <strong>pip</strong>:</p>
+            <pre class="code-block"><code>pip install \
+"symaware-base@git+https://gitlab.mpi-sws.org/sadegh/eicsymaware.git@base"</code></pre>
+            <p class="paragraph">Include support for a specific simulator (e.g., Pybullet):</p>
+            <pre class="code-block"><code>pip install \
+"symaware-pybullet@git+https://gitlab.mpi-sws.org/sadegh/eicsymaware.git@pybullet"</code></pre>
+            <p class="paragraph">Or install all supported simulator interfaces & ROS at once:</p>
+            <pre class="code-block"><code>pip install \
+"symaware-base[simulators,extra]@git+https://gitlab.mpi-sws.org/sadegh/eicsymaware.git@base"</code></pre>
+        </div>
+
+        <!-- Key Components -->
+        <div class="wrapper_box__card">
+            <h1 class="heading_secondary u-text-underline">Key Components</h1>
+            <ul class="feature-list">
+                <li>
+                    <span class="feature-label">Controller</span>
+                    Computes control inputs using the agent's awareness and knowledge databases.
+                </li>
+                <li>
+                    <span class="feature-label">PerceptionSystem</span>
+                    Collects and integrates sensory information from the environment.
+                </li>
+                <li>
+                    <span class="feature-label">CommunicationSystem</span>
+                    Sends and receives messages between agents (TCP, UDP, ROS, custom protocols).
+                </li>
+            </ul>
+        </div>
+
+        <!-- Examples -->
+        <div class="wrapper_box__card">
+            <h1 class="heading_secondary u-text-underline">Running the examples</h1>
+            <p class="paragraph">
+                The <a href="https://gitlab.mpi-sws.org/sadegh/eicsymaware/-/tree/base/examples"
+                    class="resource-link__label" target="_blank">examples folder</a> contains several use cases
+                demonstrating the framework's
+                capabilities.
+                Some examples require specific simulators to be installed and configured, while others can be run
+                in a simple Python environment.
+            </p>
+            <p class="paragraph">
+                To run an example, clone the repository, install the desired simulator interfaces (e.g.,
+                <code>symaware-pybullet</code>),
+                and execute the script, e.g.,
+            <pre class="code-block"><code>python3 examples/drone_main.py</code></pre>
+        </div>
+
+        <!-- Case Studies -->
+        <div class="wrapper_box__card wrapper_box__card--wide">
+            <h1 class="heading_secondary u-text-underline">Case Studies</h1>
+            <div class="case-studies">
+                <div class="case-study">
+                    <h2 class="heading_tertiary">Risk-Aware Dynamic Task Allocation</h2>
+                    <p class="paragraph">
+                        Control synthesis for heterogeneous stochastic linear multi-agent systems
+                        with real-time allocation of Signal Temporal Logic (STL) specifications,
+                        using tube-based Model Predictive Control.
+                    </p>
+                    <a href="https://doi.org/10.23919/ECC65951.2025.11186903" target="_blank" class="btn-link">
+                        Paper →
+                    </a>
+                </div>
+                <div class="case-study">
+                    <h2 class="heading_tertiary">Multi-Agent Spatio-Temporal Goals</h2>
+                    <p class="paragraph">
+                        Distributed sampled-data control for heterogeneous multi-agent systems
+                        under global spatio-temporal tasks with acyclic dependencies, including
+                        communication maintenance enforcement.
+                    </p>
+                    <a href="https://doi.org/10.1109/CDC56724.2024.10885877" target="_blank"
+                        class="btn-link">
+                        Paper →
+                    </a>
+                </div>
+                <div class="case-study">
+                    <h2 class="heading_tertiary">Intent-Aware Collision Avoidance</h2>
+                    <p class="paragraph">
+                        Robust Model Predictive Control for aircraft collision avoidance using
+                        intent information encoded as waypoints and scenario tree MPC for
+                        uncertainty handling.
+                    </p>
+                    <a href="https://doi.org/10.1109/CDC56724.2024.10886695" target="_blank" class="btn-link">
+                        Paper →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Links -->
+        <div class="wrapper_box__card">
+            <h1 class="heading_secondary u-text-underline">Resources</h1>
+            <div class="resource-links">
+                <a href="https://gitlab.mpi-sws.org/sadegh/eicsymaware" target="_blank" class="resource-link">
+                    <span class="resource-link__icon">&#xe601;</span>
+                    <span class="resource-link__label">GitLab Repository</span>
+                    <span class="resource-link__desc paragraph">Source code, issues &amp; CI/CD</span>
+                </a>
+                <a href="https://sadegh.pages.mpi-sws.org/eicsymaware/" target="_blank" class="resource-link">
+                    <span class="resource-link__icon">&#128218;</span>
+                    <span class="resource-link__label">Technical Documentation</span>
+                    <span class="resource-link__desc paragraph">API reference, design &amp; guides</span>
+                </a>
+                <a href="https://gitlab.mpi-sws.org/sadegh/eicsymaware/-/packages" target="_blank"
+                    class="resource-link">
+                    <span class="resource-link__icon">&#127744;</span>
+                    <span class="resource-link__label">Package registry</span>
+                    <span class="resource-link__desc paragraph">Install via pip</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>

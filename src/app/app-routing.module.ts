@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { NewsComponent } from './news/news.component'
 import { PositionsComponent } from './positions/positions.component'
 import { EicPathfinderChallengeComponent } from './eic-pathfinder-challenge/eic-pathfinder-challenge.component'
+import { SoftwareComponent } from './software/software.component'
 
 const routes: Routes = [
     { path: '', pathMatch: 'full', component: HomeComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
         path: 'eic-pathfinder-challenge',
         component: EicPathfinderChallengeComponent,
     },
+    { path: 'software', component: SoftwareComponent },
     // { path: 'demonstrations', component: DemonstrationsComponent },
     { path: '**', component: PageNotFoundComponent },
 ]
