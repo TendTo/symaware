@@ -35,7 +35,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '27 Mar 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D1.1 Report on the Conceptual formulation of logic, model and methods.pdf',
     },
     {
         wp_number: '1',
@@ -51,7 +51,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '30 Sep 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D1.2 First version of the framework and tool integration.pdf',
     },
     {
         wp_number: '1',
@@ -67,7 +67,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '30 Sep 2024',
         approval_date: null,
         status: 'Submitted',
-        link: '',
+        link: '../../assets/deliverables/D1.3 Second version of the framework and tool integration.pdf',
     },
     {
         wp_number: '1',
@@ -101,7 +101,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '30 Sep 2024',
         approval_date: null,
         status: 'Submitted',
-        link: '',
+        link: '../../assets/deliverables/D2.1 Task decomposition based on robustness metrics.pdf',
     },
     {
         wp_number: '2',
@@ -135,7 +135,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '31 Mar 2025',
         approval_date: null,
         status: 'Submitted',
-        link: '',
+        link: '../../assets/deliverables/D2.3 Task planning for a multi-agent system based on risk awareness.pdf',
     },
     {
         wp_number: '2',
@@ -152,7 +152,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '30 Sep 2024',
         approval_date: null,
         status: 'Submitted',
-        link: '',
+        link: '../../assets/deliverables/D2.4 Task Planning Using Limited Information.pdf',
     },
     {
         wp_number: '2',
@@ -186,7 +186,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '02 Oct 2025',
         approval_date: null,
         status: 'Submitted',
-        link: '',
+        link: '../../assets/deliverables/D3.1 Local risk measures for multi-agent systems.pdf',
     },
     {
         wp_number: '3',
@@ -202,8 +202,8 @@ export const deliverables: Deliverable[] = [
         new_due_date: null,
         delivery_date: null,
         approval_date: null,
-        status: 'Pending',
-        link: '',
+        status: 'Submitted',
+        link: '../../assets/deliverables/D3.2 Mechanisms to communicate risk.pdf',
     },
     {
         wp_number: '3',
@@ -220,7 +220,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '31 Mar 2024',
         approval_date: null,
         status: 'Submitted',
-        link: '',
+        link: '../../assets/deliverables/D3.3 Methods to predict and quantify uncertain scenarios.pdf',
     },
     {
         wp_number: '3',
@@ -237,7 +237,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '24 Sep 2025',
         approval_date: null,
         status: 'Submitted',
-        link: '',
+        link: '../../assets/deliverables/D3.4 Risk based on the unknown unsafe scenarios.pdf',
     },
     {
         wp_number: '4',
@@ -254,7 +254,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '29 Mar 2024',
         approval_date: null,
         status: 'Submitted',
-        link: '',
+        link: '../../assets/deliverables/D4.1 An automated methodology for verifying knowledge awareness.pdf',
     },
     {
         wp_number: '4',
@@ -305,7 +305,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '30 May 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D5.1 Awareness in UTM operational concept.pdf',
     },
     {
         wp_number: '5',
@@ -322,7 +322,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '30 Sep 2024',
         approval_date: null,
         status: 'Submitted',
-        link: '',
+        link: '../../assets/deliverables/D5.2 Extensive awareness models for safe and resilient UTM.pdf',
     },
     {
         wp_number: '5',
@@ -356,7 +356,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '30 Sep 2024',
         approval_date: null,
         status: 'Submitted',
-        link: '',
+        link: '../../assets/deliverables/D5.4 Vehicle-in-the-loop demonstrator.pdf',
     },
     {
         wp_number: '5',
@@ -390,7 +390,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '30 Sep 2024',
         approval_date: null,
         status: 'Submitted',
-        link: '',
+        link: '../../assets/deliverables/D6.1 Ethical issues in human-agent interaction.pdf',
     },
     {
         wp_number: '6',
@@ -441,7 +441,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '31 Mar 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D7.1 Plan for Dissemination and Exploitation.pdf',
     },
     {
         wp_number: '7',
@@ -458,7 +458,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '29 Sep 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D7.2 Plan for Dissemination and Exploitation.pdf',
     },
     {
         wp_number: '7',
@@ -491,7 +491,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '31 Mar 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D7.4 Data Management Plan.pdf',
     },
     {
         wp_number: '7',
@@ -524,7 +524,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '29 Mar 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D7.6 Report on public website.pdf',
     },
     {
         wp_number: '7',
@@ -541,7 +541,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '27 Sep 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D7.7 Software tools on public Git repository (first release).pdf',
     },
     {
         wp_number: '7',
@@ -558,7 +558,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '30 Sep 2024',
         approval_date: null,
         status: 'Submitted',
-        link: '',
+        link: '../../assets/deliverables/D7.8 Software tools on public Git repository (second release).pdf',
     },
     {
         wp_number: '7',
@@ -592,7 +592,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '29 Mar 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D8.1 Project collaborative platform.pdf',
     },
     {
         wp_number: '8',
@@ -609,7 +609,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '03 Nov 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D8.2 Technical_scientific review meeting documents 1.pdf',
     },
     {
         wp_number: '8',
@@ -643,7 +643,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '31 Mar 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D9.1 AI - Requirement No. 1.pdf',
     },
     {
         wp_number: '9',
@@ -660,7 +660,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '30 Jun 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D9.2 OEI - Requirement No. 2.pdf',
     },
     {
         wp_number: '9',
@@ -677,7 +677,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '31 Mar 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D9.3 OEI - Requirement No. 3.pdf',
     },
     {
         wp_number: '9',
@@ -694,7 +694,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '30 Jun 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D9.4 OEI - Requirement No. 4.pdf',
     },
     {
         wp_number: '9',
@@ -711,7 +711,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '25 Sep 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D9.5 OEI - Requirement No. 5.pdf',
     },
     {
         wp_number: '9',
@@ -745,7 +745,7 @@ export const deliverables: Deliverable[] = [
         delivery_date: '27 Sep 2023',
         approval_date: '19 Feb 2024',
         status: 'Approved',
-        link: '',
+        link: '../../assets/deliverables/D10.1 Portfolio Activities Report No. 1.pdf',
     },
     {
         wp_number: '10',
