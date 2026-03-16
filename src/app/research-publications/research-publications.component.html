@@ -148,8 +148,8 @@
                             </p>
                         </ng-template>
                     </div>
-                    <div *ngIf="publication.type_pub" class="publication__type_pub paragraph">
-                        <em>{{ publication.type_pub }}</em>
+                    <div *ngIf="publication.journal" class="publication__type_pub paragraph">
+                        <em>{{ publication.journal }}</em>
                     </div>
                     <div class="publication__authors paragraph">
                         <strong>Authors:</strong> {{ publication.authors }}
