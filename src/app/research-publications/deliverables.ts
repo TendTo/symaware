@@ -287,8 +287,8 @@ export const deliverables: Deliverable[] = [
         new_due_date: null,
         delivery_date: null,
         approval_date: null,
-        status: 'Pending',
-        link: '',
+        status: 'Submitted',
+        link: '../../assets/deliverables/D4.3 Communicating spatial information to humans.pdf',
     },
     {
         wp_number: '5',
@@ -423,8 +423,8 @@ export const deliverables: Deliverable[] = [
         new_due_date: null,
         delivery_date: null,
         approval_date: null,
-        status: 'Pending',
-        link: '',
+        status: 'Submitted',
+        link: '../../assets/deliverables/D6.3 Mechanisms to promote fairness.pdf',
     },
     {
         wp_number: '7',
