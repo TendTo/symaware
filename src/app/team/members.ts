@@ -188,6 +188,30 @@ export const members = [
         role: 'phd',
         partner: 'affiliated',
     },
+    {
+        name: 'Jake Rap',
+        image: '../../assets/images/people/jake-rap.png',
+        description: 'Lab Manager',
+        institution: 'tu/e',
+        role: 'phd',
+        partner: 'academic',
+    },
+    {
+        name: "Hong Wang",
+        image: '../../assets/images/people/hong-wang.jpg',
+        description: 'PhD Student',
+        institution: 'UU',
+        role: 'phd',
+        partner: 'academic',
+    },
+    {
+        name: "Mirco Kroon",
+        image: '../../assets/images/people/mirco-kroon.jpg',
+        description: 'R&D Engineer',
+        institution: 'NLR',
+        role: '',
+        partner: 'industry',
+    }
 ]
 
 export const leaders = [
