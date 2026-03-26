@@ -15,6 +15,76 @@
 // },
 export const newsItem = [
     {
+        title: 'Navigating Complex Goals',
+        description:
+            '🚦 How can autonomous systems coordinate complex goals in space and time?',
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7442540608872898560',
+    },
+    {
+        title: 'Team Milestones',
+        description:
+            '🎉 Join us in congratulating our SymAware team members as they begin exciting new chapters in their careers 🎉',
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7442154057890439168',
+    },
+    {
+        title: 'Book in the Works',
+        description:
+            '🚀 Excited to share that we are working on a new book on Computational Awareness, to be published by Elsevier.',
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7442149910432440320',
+    },
+    {
+        title: 'Temporal Risk Metric',
+        description:
+            '🔍 How do you quantify risk for systems with rich temporal specifications — even without a model?',
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7441949978597474305',
+    },
+    {
+        title: 'Scalable MAS Control',
+        description:
+            '🚀 Excited to share new results from the SymAware project on scalable, correct-by-design control for multi-agent systems!',
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7441013565714518016',
+    },
+    {
+        title: 'HRI 2026 Edinburgh',
+        description:
+            'What a wonderful week for the SymAware project at the Human-Robot Interaction Conference hashtag#HRI2026 in Edinburgh! 🤖✨',
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7440803788875190273',
+    },
+    {
+        title: 'Correct by Design',
+        description:
+            '🚀 Excited to share new results from the SymAware project on scalable, correct-by-design control for multi-agent systems!',
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7440445647717199872',
+    },
+    {
+        title: 'What is the SymAware framework?',
+        description:
+            '🚀 SymAware is building a framework for situational awareness in multi agent systems, enabling them to understand, reason, and act safely in complex environments.',
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7439981132387090432',
+    },
+    {
+        title: 'Driving Safety',
+        description:
+            '🚗 How can autonomous systems act safely based on what they know about their environment?',
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7439690645230931969',
+    },
+    {
+        title: 'Aware Decisions',
+        description:
+            '🚦 How can autonomous systems use situational awareness to guide their decision making',
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7439291740940992512',
+    },
+    {
         title: 'New Paper!',
         description:
             'Arabinda Ghosh has just presented a paper that dives into enhancing the safety of autonomous driving through a high-level perspective..',

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core'
 import { newsItem } from './newsItem'
 import KeenSlider, { KeenSliderInstance } from 'keen-slider'
+import { ImageGeneratorService } from './image-generator.service'
 
 @Component({
     selector: 'app-news',
@@ -17,7 +18,10 @@ export class NewsComponent implements OnInit {
     newsItems = newsItem
     @ViewChild('sliderRef') sliderRef: ElementRef<HTMLElement>
     slider: KeenSliderInstance = null
-    ngOnInit(): void {}
+    constructor(private imageGenerator: ImageGeneratorService) {}
+    ngOnInit(): void {
+        void this.updateResolvedCoverImage()
+    }
 
     ngAfterViewInit() {
         setTimeout(() => {
@@ -49,5 +53,24 @@ export class NewsComponent implements OnInit {
     }
     ngOnDestroy() {
         if (this.slider) this.slider.destroy()
+    }
+
+    private async updateResolvedCoverImage(): Promise<void> {
+        for (const item of this.newsItems) {
+            if (typeof window !== 'undefined' && !item.image) {
+                try {
+                    const generated =
+                        await this.imageGenerator.generateCoverPlaceholder({
+                            title: item.title || 'LinkedIn update',
+                            subtitle: 'New LinkedIn post!',
+                            width: 290,
+                            height: 160,
+                        })
+                    item.image = generated.dataUrl
+                } catch {
+                    item.image = ''
+                }
+            }
+        }
     }
 }
