@@ -15,6 +15,13 @@
 // },
 export const newsItem = [
     {
+        title: 'Average-Reward RL for Omega-Regular Specifications',
+        description:
+            '🚀 Our paper on average-reward RL for omega-regular specifications is out in JAIR!',
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7444678520150179840',
+    },
+    {
         title: 'Navigating Complex Goals',
         description:
             '🚦 How can autonomous systems coordinate complex goals in space and time?',
