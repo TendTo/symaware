@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Build and Deploy (github pages)
 
 on:
   workflow_dispatch:
@@ -16,16 +16,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
-      - uses: chill-viking/npm-ci@latest
-        name: Install npm dependencies
+      - uses: actions/setup-node@v6
+        with:
+          cache: 'npm'
+
+      - name: Install npm dependencies
+        run: npm ci
 
       - name: Build
         run: npm run build -- --base-href=/symaware/
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
@@ -34,15 +38,4 @@ jobs:
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
-
-      # - name: Push To Server
-      #   uses: appleboy/scp-action@v1
-      #   with:
-      #     host: ${{ secrets.HOST }}
-      #     username: ${{ secrets.USERNAME }}
-      #     key: ${{ secrets.KEY }}
-      #     source: dist/www.symaware.eu
-      #     target: /www/sws-websites/
-      #     strip_components: 1
-      #     overwrite: true
+        uses: actions/deploy-pages@v5
