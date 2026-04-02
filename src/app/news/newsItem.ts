@@ -15,6 +15,20 @@
 // },
 export const newsItem = [
     {
+        title: 'High Dimensionality in MAS Control',
+        description:
+            '❓ How do you scale provably safe control to multi-agent systems without drowning in dimensionality?',
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7445476069366870016',
+    },
+    {
+        title: 'Communicating Spatial Information',
+        description:
+            '🎉 New publication on gathering and communicating spatial information to humans!',
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7445108953643937792',
+    },
+    {
         title: 'Average-Reward RL for Omega-Regular Specifications',
         description:
             '🚀 Our paper on average-reward RL for omega-regular specifications is out in JAIR!',
@@ -48,13 +62,6 @@ export const newsItem = [
             '🔍 How do you quantify risk for systems with rich temporal specifications — even without a model?',
         image: '',
         link: 'https://www.linkedin.com/feed/update/urn:li:activity:7441949978597474305',
-    },
-    {
-        title: 'Scalable MAS Control',
-        description:
-            '🚀 Excited to share new results from the SymAware project on scalable, correct-by-design control for multi-agent systems!',
-        image: '',
-        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7441013565714518016',
     },
     {
         title: 'HRI 2026 Edinburgh',
