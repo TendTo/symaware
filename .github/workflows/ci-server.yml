@@ -15,7 +15,7 @@ jobs:
 
       - uses: actions/setup-node@v6
         with:
-          cache: 'npm'
+          cache: "npm"
 
       - name: Install npm dependencies
         run: npm ci
@@ -28,13 +28,13 @@ jobs:
           name: symaware-website
           path: dist/www.symaware.eu/
 
-      # - name: Push To Server
-      #   uses: appleboy/scp-action@v1
-      #   with:
-      #     host: ${{ secrets.HOST }}
-      #     username: ${{ secrets.USERNAME }}
-      #     key: ${{ secrets.KEY }}
-      #     source: dist/www.symaware.eu
-      #     target: /www/sws-websites/
-      #     strip_components: 1
-      #     overwrite: true
+      - name: Push To Server
+        uses: appleboy/scp-action@v1
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          source: dist/www.symaware.eu
+          target: /www/sws-websites/
+          strip_components: 1
+          overwrite: true
