@@ -51,14 +51,14 @@ export class ImageGeneratorService {
         ctx.fillStyle = 'rgba(0, 0, 0, 0.10)'
         ctx.fillRect(0, 0, width, height)
 
-        const padding = 44
+        const padding = 30
         const maxTextWidth = width - padding * 2
 
         // Title
         ctx.fillStyle = '#F4C963'
         ctx.textBaseline = 'top'
         ctx.font =
-            '700 22px Plus Jakarta Sans, system-ui, -apple-system, sans-serif'
+            '700 20px Plus Jakarta Sans, system-ui, -apple-system, sans-serif'
         const titleLines = this.wrapText(
             ctx,
             options.title?.trim().toUpperCase() || 'Update',
