@@ -15,6 +15,13 @@
 // },
 export const newsItem = [
     {
+        title: 'User Evaluation of DAA Paradigms',
+        description:
+            '✈️ We are pleased to present a user evaluation conducted with professional remote pilots comparing DAA paradigms.',
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7445476069366870016',
+    },
+    {
         title: 'High Dimensionality in MAS Control',
         description:
             '❓ How do you scale provably safe control to multi-agent systems without drowning in dimensionality?',
