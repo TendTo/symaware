@@ -15,6 +15,13 @@
 // },
 export const newsItem = [
     {
+        title: 'Robot Confidence and Pedestrian Safety',
+        description:
+            "How does a robot's internal confidence help pedestrians make safer, more informed decisions in shared spaces?",
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7447918162215399424',
+    },
+    {
         title: 'User Evaluation of DAA Paradigms',
         description:
             '✈️ We are pleased to present a user evaluation conducted with professional remote pilots comparing DAA paradigms.',
