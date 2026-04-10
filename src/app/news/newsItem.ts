@@ -15,6 +15,13 @@
 // },
 export const newsItem = [
     {
+        title: 'Pre-congress Workshop at IFAC',
+        description:
+            "Workshop on Formal Verification and Control in Uncertain Networked Systems at IFAC 2026",
+        image: '',
+        link: 'https://www.linkedin.com/feed/update/urn:li:activity:7448351364184866816',
+    },
+    {
         title: 'Robot Confidence and Pedestrian Safety',
         description:
             "How does a robot's internal confidence help pedestrians make safer, more informed decisions in shared spaces?",
